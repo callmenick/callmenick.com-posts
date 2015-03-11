@@ -17,7 +17,7 @@ The `insertBefore` method takes two arguments. The first is the element we want 
 
 The method `firstChild` will allow us to target the first child element inside an element, so we’ll use this in our second parameter for `insertBefore`. Here’s what our final code will look like:
 
-```language-javascript
+```javascript
 // fetch our section element
 var section = document.querySelector("section");
 
