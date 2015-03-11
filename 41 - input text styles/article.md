@@ -1,3 +1,8 @@
+<p class="text-align--center">
+<a href="http://www.callmenick.com/tutorial-demos/input-text-styles/input-text-styles-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://www.callmenick.com/tutorial-demos/input-text-styles/input-text-styles-source.zip" class="button button--inline-block button--medium">View Demo</a>
+</p>
+
 ## Adding Beauty To Your Forms
 
 Website forms have long had a history of being boring, bland, and unappealing. In the past few years though, CSS and CSS3 have opened up some possibilities for us. I previously looked at [making stylish buttons with pure CSS](http://callmenick.com/2014/04/08/stylish-css-buttons/), and a lot of times, buttons follow input fields. Let’s take a look at some ways that we could prettify our forms, by implementing the following various CSS input text styles. Some of these are already popular around the web, and add an attractive and welcoming interface. Let’s get started!
@@ -49,8 +54,6 @@ Let’s take a look at some styles!
 
 ## \#1) The Glow
 
-IMG
-
 This is a pretty common style these days.  The input has a thin border, and when it is focused, an outer glow fades in. We’ll use the box-shadow property to achieve the glow, and fade it in with a CSS3 transition. Here’s what the CSS looks like.
 
 ### The CSS
@@ -70,9 +73,7 @@ This is a pretty common style these days.  The input has a thin border, and when
 
 Pretty simple and easy, right? Moving on.
 
-## /#2) The Thick Border
-
-IMG
+## \#2) The Thick Border
 
 The “thick border” style is common on minimalist sites or flat design sites. It’s easy, and just a thick border. The border will transition to a darker colour when focused using CSS3 transitions.
 
@@ -94,8 +95,6 @@ Super simple, and looking good. On we go!
 
 ## \#3) The Double Border
 
-IMG
-
 The “double border” style is also common in flat design, and is a bit of a step up from the simple thick border style. We’ll use the border property as before, but also create the inner thin-lined border by using the box-shadow property.
 
 ### The CSS
@@ -114,9 +113,7 @@ The “double border” style is also common in flat design, and is a bit of a s
 ```
 Neat! Amazing what a little bit of CSS can do…we just used a box-shadow to achieve a solid border look. Moving on!
 
-#4) The Underline
-
-IMG
+## \#4) The Underline
 
 This one is more along the lines of what you might see in a real-life pen & paper form. Just a line. We reset all borders, apply only a bottom border, and transition the colour to a darker one on focus.
 
@@ -138,8 +135,6 @@ This one is more along the lines of what you might see in a real-life pen & pape
 Simple, and effective.
 
 ## \#5) The Inset
-
-IMG
 
 This style, the “inset”, gives the user the feeling that the input is set into the page. It’s a beautiful and effective style that once required imagery to achieve. Now, plain and simple CSS and CSS3 can give us the effect we want. A simple transition will lighten it up when the user focuses.
 
@@ -163,3 +158,8 @@ Beautiful and effective!
 ## Wrap Up
 
 As we’ve seen many times now, CSS and CSS3 open up a lot of options for us. Once we get creative and start thinking outside the box a bit, the possibilities really open up. I’ve only touched the surface here, so it’s up to you to use this knowledge and get creative. Thanks for reading, and feel free to view the demo, download the source, or leave feedback below.
+
+<p class="text-align--center">
+<a href="http://www.callmenick.com/tutorial-demos/input-text-styles/input-text-styles-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://www.callmenick.com/tutorial-demos/input-text-styles/input-text-styles-source.zip" class="button button--inline-block button--medium">View Demo</a>
+</p>
