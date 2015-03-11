@@ -1,14 +1,12 @@
 ## The Importance of Archive Pages
 
-Archive pages are a very good tool for any writer/blogger’s website. It gathers all your content into a neat, concise, and easy to traverse page. It’s important then that we display this page in a presentable and attractive manner. This snippet will show you how to create a WordPress custom archive page by using a custom query, and doing some conditional checks. We don’t just want to spit out the titles of all our posts on one page. Instead, let’s customise the loop to group our posts on a month by month basis. Each month will have a big heading, and underneath it, a list of all post titles, published dates, and permalinks to the posts from that month. If no posts got published that month, the loop would automatically leave out that heading. Below is a screenshot of what we want our archive page to look like. And if you want to see it in action, [it’s on my own site right here](http://callmenick.com/archive/).
-
-<img class="aligncenter size-large wp-image-535" alt="Archive   Call Me Nick" src="http://www.callmenick.com/wp-content/uploads/2014/04/Archive-Call-Me-Nick-870x423.png" width="870" height="423">
+Archive pages are a very good tool for any writer/blogger’s website. It gathers all your content into a neat, concise, and easy to traverse page. It’s important then that we display this page in a presentable and attractive manner. This snippet will show you how to create a WordPress custom archive page by using a custom query, and doing some conditional checks. We don’t just want to spit out the titles of all our posts on one page. Instead, let’s customise the loop to group our posts on a month by month basis. Each month will have a big heading, and underneath it, a list of all post titles, published dates, and permalinks to the posts from that month. If no posts got published that month, the loop would automatically leave out that heading.
 
 ## Creating Our Custom WordPress Archive Page
 
 The first thing you’ll want to do is create a new custom template file, and name it “Archive Page”. The name of the actual file should be something like page-archive.php, and should exist in your theme folder. Load up your normal theme template for a page, and right where you’d run your normal loop, delete all the code there. We’re going to create a new instance of WP_Query, and customise the output. We’ll start by setting up our arguments array, then passing it into WP_Query. After that,  we’ll run the loop on our new query, and do some conditional checks. Let’s first look at the code, then dig into some explanations about what’s going on.
 
-```language-php
+```php
 <?php
 /**
  * Template Name: Archive Page
