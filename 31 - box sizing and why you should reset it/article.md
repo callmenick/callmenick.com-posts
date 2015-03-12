@@ -2,13 +2,11 @@
 
 When we set the width of an HTML element in our CSS, we want it to stay that width, plain and simple. The majority of modern browsers, for some reason, totally ignores our needs though if we apply a padding or border to our element. Instead of adding the padding or border to the inside of the element, the padding/border actually gets added to the outside, increasing the width/height of your element by the padding/border value. Nuts. This can totally convolute our natural logical thought process, and make for lots of needless mathematical calculations. And if we want to change the padding or border width on our element without breaking the layout, what then? We’d have to re-calculate the width of the element to compensate for the change in the padding/border.
 
-<img class="aligncenter size-full wp-image-493" alt="Default box model" src="http://www.callmenick.com/wp-content/uploads/2014/03/outside-padding.png" width="880" height="300">
-
 ## What It Should Be
 
 I say “should”, because really, intuitively speaking, the default set up should be that when you set your width/height of your element, it should remain that width and height no matter if you add a padding or border to it. Strangely enough, IE6 and below, when operating in “quirks mode”, took on this behaviour. Kudos to early Internet Explorers for getting this one right. The image below demonstrates how the box model should work, if intuition and streamline coding is of any value to you.
 
-<img class="aligncenter size-full wp-image-494" alt="Border box reset" src="http://www.callmenick.com/wp-content/uploads/2014/03/border-box-reset.png" width="880" height="300">
+![border box reset]()
 
 ## The Box Sizing Property
 
@@ -28,10 +26,10 @@ The default property is content-box, hereby leading to the weird, unintuitive CS
 
 We can (and should) reset the `box-sizing` property to `border-box` so that our elements don’t have any widths and heights being added to them because of borders and paddings. This was one of those “oh snap” CSS moments for me, and I’ve never looked back since. I suggest applying it across your entire CSS style sheet. To do this, insert this little snippet:
 
-```language-css
+```css
 *,
-*:before,
-*:after {
+*::before,
+*::after {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
