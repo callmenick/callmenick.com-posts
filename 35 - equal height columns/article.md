@@ -1,18 +1,15 @@
-Achieving equal height columns with just CSS is such a common scenario with a few simple solutions. In projects that follow a standard content-sidebar layout, it just helps to have both of the containers seemingly stretch to the bottom of the page. It just looks better, cleaner, and more complete. I’m going to highlight three different ways that this can be achieved, using strictly CSS. No JavaScript, no jQuery to calculate the height of one and set it on the other. Just plain old beautiful CSS. First, let’s look at some graphics below that show us the problem and the desired solution.
+<p class="text-align--center">
+<a href="http://callmenick.com/tutorial-demos/css-equal-height-columns/css-equal-height-columns-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/tutorial-demos/css-equal-height-columns/" class="button button--inline-block button--medium">View Demo</a>
+</p>
 
-## The Problem
-
-<img class="aligncenter size-full wp-image-510" src="http://www.callmenick.com/wp-content/uploads/2014/04/the-problem.png" alt="the-problem" width="870" height="300">
-
-## The Solution
-
-<img class="aligncenter size-full wp-image-511" src="http://www.callmenick.com/wp-content/uploads/2014/04/the-solution.png" alt="the-solution" width="870" height="300">
+Achieving equal height columns with just CSS is such a common scenario with a few simple solutions. In projects that follow a standard content-sidebar layout, it just helps to have both of the containers seemingly stretch to the bottom of the page. It just looks better, cleaner, and more complete. I’m going to highlight three different ways that this can be achieved, using strictly CSS. No JavaScript, no jQuery to calculate the height of one and set it on the other. Just plain old beautiful CSS.
 
 ## Diving In
 
 It’s common for designs/developers to want to achieve this look just purely for aesthetic purposes. It often finishes the page nicer, and makes everything seem more connected. The reason it doesn’t work off the bat is because of floated elements. A container that contains floated elements will expand to the height of the tallest element, only if that container is cleared (I use the common `clearfix` method, so should you). This means that setting the column heights to 100% will have no effect, because the containing element doesn’t actually have a height. Fear not though, simple solutions await us. Let’s first look at the markup we’ll be using for the first two examples.
 
-```language-markup
+```html
 <div class="main">
     <div class="container clearfix">
         <div class="content">
@@ -39,7 +36,7 @@ Now, let’s dig into each of our three examples.
 
 This first method uses margins, paddings, and overflow to force the columns to be equal heights. The methodology entails setting a big enough padding at the bottom of each floated element, and countering it with an equal negative margin at the bottom of the same elements. The trick is to set the overflow on the parent container to hidden. We’re going to assume a fixed sidebar and fluid content container for this example. Here’s our CSS:
 
-```language-css
+```css
 .main .container {
     padding-right: 330px;
     overflow: hidden;
@@ -68,7 +65,7 @@ aside {
 
 Simple and easy! This could be extended to multiple rows for a more grid-like layout instead of just two columns. You can also use fluid width columns if you want. This method can extend across all types of grid work, and I use it right here on my site on the home and category pages to layout the articles/posts in a grid format with equal heights. Some simple media queries will set us up for a responsive flow. Here they are:
 
-```language-css
+```css
 @media all and (max-width: 840px) { 
 	.main .container {
 	    padding: 0 30px;
@@ -99,7 +96,7 @@ Simple and easy, right? Now, onto solution number 2.
 
 This version makes use of the pseudo class `:after`. It also makes use of the fact that this pseudo class places content right after the element. It requires a hint of math to make things line up, but it reacts appropriately when you resize the browser etc. The parent container will have a relative positioning, and the pseudo elements will take on an absolute positioning, with 100% heights. We’ll only position the pseudo elements the required distance from the left and right of the container though. The container will have a hidden overflow on it too. Here’s the CSS:
 
-```language-css
+```css
 .main .container {
     padding: 0 360px 0 30px;
     position: relative;
@@ -140,7 +137,7 @@ aside {
 
 The left and right positioning of the content and sidebar are 30px to compensate for the padding on the parent container. Let’s dig into some media queries to make it responsive:
 
-```language-css
+```css
 @media all and (max-width: 840px) { 
 	.main .container {
 	    padding: 0 30px;
@@ -167,7 +164,7 @@ Nice and easy, huh? Onto number 3.
 
 Ah, the good old table layout. We won’t actually use tables in this solution, but we’ll set our CSS properties to have table displays. This is probably the simplest solution, but still my least favourite. I try to stay away from table layouts a lot these days, especially if using the CSS properties. You need to be mindful of browser support and different browser interpretations. Nonetheless, it’s still an elegant, simple, valid solution, and if it works for you, then go for it. The HTML structure is a bit different this time too, so let’s first take a look at that:
 
-```language-markup
+```html
 <div class="main">
     <div class="container">
 
@@ -193,7 +190,7 @@ Ah, the good old table layout. We won’t actually use tables in this solution, 
 
 We’ll set the parent to `display: table`, we’ll have a table row as well, and our two columns inside. I reset the container padding to 0 to compensate for the border-spacing property on the table. Here’s our CSS:
 
-```language-css
+```css
 .main .container {
     padding: 0 0
 }
@@ -217,7 +214,7 @@ We’ll set the parent to `display: table`, we’ll have a table row as well, an
 
 Let’s round it off with some media queries to make it responsive. We need to reset the table[-row, column] display to block display, and add our container padding back. Not too much work at all. Here’s the CSS:
 
-```language-css
+```css
 @media all and (max-width: 840px) { 
 	/* demo 3 */
 	.main .container {
@@ -250,3 +247,8 @@ Support for the CSS flexible box layout (flexbox) is on the rise, and that’s a
 ## Wrap Up
 
 There are probably more ways than above out there to achieve equal height columns. The above demonstrates just how easy it can be with plain old CSS, of different varieties. The best solution is always what works best for you though! I hope you enjoyed this tutorial, and feel free to leave any feedback below!
+
+<p class="text-align--center">
+<a href="http://callmenick.com/tutorial-demos/css-equal-height-columns/css-equal-height-columns-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/tutorial-demos/css-equal-height-columns/" class="button button--inline-block button--medium">View Demo</a>
+</p>
