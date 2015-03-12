@@ -11,7 +11,7 @@ If you’re not using SVG in your projects now, you should. SVG is awesome, and 
 
 Using Modernizr, we can detect whether the browser supports SVG or not. If we’re using our SVG as a background image, then it’s as simple as saving the SVG and PNG versions of the image, and writing one extra CSS class declaration. This won’t have any double download issues, because the no-svg class would never be seen if SVG is supported, and vice versa. Here’s the CSS:
 
-```language-css
+```css
 .tomato {
 	background-image: url('img/tomato.svg');
 }
@@ -24,7 +24,7 @@ Using Modernizr, we can detect whether the browser supports SVG or not. If we’
 
 This technique is even a bit cooler, because it doesn’t depend on any libraries. If you’ve already included Modernizr in your project, then it doesn’t matter too much. But if you’re considering including Modernizr in your project just for the sake of having a fallback for a background SVG image, then you’ll be better off using this method. This neat CSS trick works because multiple background image support is pretty much the same as SVG support, so if multiple backgrounds isn’t supported, the browser will fallback to the first declaration, hence displaying the PNG version.
 
-```language-css
+```css
 .tomato {
 	background: url('img/tomato.png');
 	background-image: url('img/tomato.svg'), none;
@@ -35,13 +35,13 @@ This technique is even a bit cooler, because it doesn’t depend on any librarie
 
 This method is good if you have access to your HTML tag yourself. It uses the `onerror`  function inside the `img` tag itself, which allows us to provide a fallback if the source image can’t load. Be careful though…if the fallback isn’t found, some browsers might go into an endless loop. Bad.
 
-```language-markup
+```html
 <img src="tomato.svg" onerror="this.src='tomato.png'">
 ```
 
 It could become tricky if you have to upload and change multiple SVG’s without direct access to the source code though. Practicality issues may arise, and if that’s the case, you can proceed to #4 below, which will auto swap the SVGs with PNGs using JavaScript. The endless loop can be avoided thanks to this little trick, __provided by Roy Reed in the comments section:__
 
-```language-markup
+```html
 <img src="tomato.svg" onerror="this.src='tomato.png'; this.onerror=null;">
 ```
 
@@ -49,11 +49,11 @@ It could become tricky if you have to upload and change multiple SVG’s without
 
 This method does however require Modernizr for its feature detection. Basically, we’ll detect if SVG is supported in the user’s browser. If it is, then we’ll leave our inline `img` tag as is. If not, we’ll run a little script that searches for `img` tags that point to SVG files, and replace the .SVG extensions with .PNG ones. You’ll need to make sure you have both  SVG and PNG versions of your file present, and with the same name, otherwise nothing will load. Here’s the HTML and JavaScript. Make sure Modernizr is included.
 
-```language-markup
+```html
 <img src="tomato.svg">
 ```
 
-```language-javascript
+```javascript
 if (!Modernizr.svg) {
     var imgs = document.getElementsByTagName('img');
     var svgExtension = /.*\.svg$/
