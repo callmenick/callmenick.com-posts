@@ -4,7 +4,7 @@ All the JavaScript DOM manipulation methods presented here are well documented o
 
 In an HTML document creates the specified HTML element or `HTMLUnknownElement` if the element is not known.
 
-```language-javascript
+```javascript
 var element = document.createElement(tagName);
 ```
 
@@ -15,7 +15,7 @@ var element = document.createElement(tagName);
 
 Adds a node to the end of the list of children of a specified parent node. If the node already exists it is removed from current parent node, then added to new parent node.
 
-```language-javascript
+```javascript
 var child = element.appendChild(child);
 ```
 
@@ -26,7 +26,7 @@ var child = element.appendChild(child);
 
 The `HTMLElement.style` property is an object that represents the element’s style attribute. To get the values of all CSS properties for an element you should use `window.getComputedStyle()` instead.
 
-```language-javascript
+```javascript
 element.style.color = "#ff3300";
 element.style.marginTop = "30px";
 element.style.paddingBottom = "30px";
@@ -36,7 +36,7 @@ element.style.paddingBottom = "30px";
 
 `innerHTML` sets or gets the HTML syntax describing the element’s descendants.
 
-```language-javascript
+```javascript
 // get the HTML of "element"
 var content = element.innerHTML;
 
@@ -48,7 +48,7 @@ otherElement.innterHTML = content;
 
 `className` gets and sets the value of the class attribute of the specified element.
 
-```language-javascript
+```javascript
 // get the class name of "element"
 var cName = element.className;
 
@@ -60,7 +60,7 @@ otherElement.className = cName;
 
 Gets or sets the element’s identifier (attribute id).
 
-```language-javascript
+```javascript
 // get the id of "element"
 var idStr = element.id;
 
@@ -76,7 +76,7 @@ Various ways to access DOM elements.
 
 Returns a reference to the element by its ID.
 
-```language-javascript
+```javascript
 element = document.getElementById(id);
 ```
 
@@ -84,7 +84,7 @@ element = document.getElementById(id);
 
 Returns an array of all child elements which have all of the given class names. This is not supported from IE8 and below, so be careful when using it.
 
-```language-javascript
+```javascript
 elements = document.getElementsByClassName(names); // or:
 elements = rootElement.getElementsByClassName(names);
 ```
@@ -97,7 +97,7 @@ elements = rootElement.getElementsByClassName(names);
 
 Returns an HTMLCollection of elements with the given tag name. The complete document is searched, including the root node.
 
-```language-javascript
+```javascript
 var elements = document.getElementsByTagName(name);
 ```
 
@@ -108,7 +108,7 @@ var elements = document.getElementsByTagName(name);
 
 Returns the first element within the document (using depth-first pre-order traversal of the document’s nodes) that matches the specified group of selectors. Supported by IE8 and up.
 
-```language-javascript
+```javascript
 element = document.querySelector(selectors);
 ```
 
@@ -117,7 +117,7 @@ element = document.querySelector(selectors);
 
 In this example, the first element in the document with the class “myclass” is returned:
 
-```language-javascript
+```javascript
 var el = document.querySelector(".myclass");
 ```
 
@@ -125,7 +125,7 @@ var el = document.querySelector(".myclass");
 
 Returns a list of the elements within the document (using depth-first pre-order traversal of the document’s nodes) that match the specified group of selectors. The object returned is a NodeList. Supported by IE8 and up.
 
-```language-javascript
+```javascript
 elementList = document.querySelectorAll(selectors);
 ```
 
@@ -134,7 +134,7 @@ elementList = document.querySelectorAll(selectors);
 
 This example returns a list of all div elements within the document with a class of either “note” or “alert“:
 
-```language-javascript
+```javascript
 var matches = document.querySelectorAll("div.note, div.alert");
 ```
 
@@ -146,7 +146,7 @@ DOM element relationships, and accessing elements in relation to other elements.
 
 `childNodes` returns a collection of child nodes of the given element.
 
-```language-javascript
+```javascript
 var ndList = elementNodeReference.childNodes;
 ```
 
@@ -154,7 +154,7 @@ var ndList = elementNodeReference.childNodes;
 
 Returns the node immediately following the specified one in its parent’s childNodes list, or null if the specified node is the last node in that list.
 
-```language-javascript
+```javascript
 nextNode = node.nextSibling
 ```
 
@@ -162,7 +162,7 @@ nextNode = node.nextSibling
 
 The `ParentNode.children` read-only property returns a live `HTMLCollection` of child elements of the given object. The items in the returned collection are objects and not strings. To get data from those node objects, you must use their properties (e.g. `elementNodeReference.children[1].nodeName` to get the name, etc.).
 
-```language-javascript
+```javascript
 var elList = elementNodeReference.children;
 ```
 
@@ -170,6 +170,6 @@ var elList = elementNodeReference.children;
 
 The `ChildNode.nextElementSibling` read-only property returns the element immediately following the specified one in its parent’s children list, or null if the specified element is the last one in the list.
 
-```language-javascript
+```javascript
 var nextNode = elementNodeReference.nextElementSibling;
 ```
