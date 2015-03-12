@@ -1,3 +1,8 @@
+<p class="text-align--center">
+<a href="http://callmenick.com/tutorial-demos/slide-push-menus/slide-push-menus-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/tutorial-demos/slide-push-menus/" class="button button--inline-block button--medium">View Demo</a>
+</p>
+
 ## Getting Started
 
 In this tutorial, we’re going to create some slide and push menus using CSS3 transitions. The menus will be hidden off the screen at first, and will transition into view when the “toggle menu” button is pressed. Let’s first define the difference in the two types of menus:
@@ -26,7 +31,7 @@ When a menu is open, we’ll show a “mask” over the main wrapper. This is ba
 
 ## The HTML
 
-```language-markup
+```html
 <body>
 
     <nav class="menu slide-menu-left">
@@ -114,7 +119,7 @@ When a menu is open, we’ll show a “mask” over the main wrapper. This is ba
 
 ## The Common CSS
 
-```language-css
+```css
 /* ------------------------------------------------------------ *\
 |* ------------------------------------------------------------ *|
 |* Template
@@ -205,11 +210,9 @@ There’s ongoing discussion about the performance differences of absolute posit
 
 ## 1) Slide Menu Left
 
-<img class="aligncenter size-full wp-image-461" alt="Slide Left Menu" src="http://www.callmenick.com/wp-content/uploads/2014/03/12.png" width="720" height="160">
-
 This menu slides in from the left over the content. Here’s the CSS for it:
 
-```language-css
+```css
 nav.slide-menu-left {
     top: 0;
     width: 300px;
@@ -248,11 +251,9 @@ body.sml-open nav.slide-menu-left {
 
 ## 2) Slide Menu Right
 
-<img class="aligncenter size-full wp-image-487" alt="Slide Menu Right" src="http://www.callmenick.com/wp-content/uploads/2014/03/21.png" width="720" height="160">
-
 This menu slides in from the right above the content. Here’s the CSS for it:
 
-```language-css
+```css
 nav.slide-menu-right {
     top: 0;
     width: 300px;
@@ -291,11 +292,9 @@ body.smr-open nav.slide-menu-right {
 
 ## 3) Slide Menu Top
 
-<img class="aligncenter size-full wp-image-488" alt="slide menu top" src="http://www.callmenick.com/wp-content/uploads/2014/03/31.png" width="720" height="120">
-
 This menu slides in from the top above the content. Here’s the CSS:
 
-```language-css
+```css
 nav.slide-menu-top {
     left: 0;
     width: 100%;
@@ -332,11 +331,9 @@ body.smt-open nav.slide-menu-top {
 
 ## 4) Slide Menu Bottom
 
-<img class="aligncenter size-full wp-image-489" alt="Slide Menu Bottom" src="http://www.callmenick.com/wp-content/uploads/2014/03/41.png" width="720" height="120">
-
 This menu slides in from the bottom above the content. Here’s the CSS:
 
-```language-css
+```css
 nav.slide-menu-bottom {
     left: 0;
     width: 100%;
@@ -373,11 +370,9 @@ body.smb-open nav.slide-menu-bottom {
 
 ## 5) Push Menu Left
 
-<img class="aligncenter size-full wp-image-490" alt="Push Menu Left" src="http://www.callmenick.com/wp-content/uploads/2014/03/51.png" width="720" height="160">
-
 This menu slides in from the left, and pushes the content to the right. A lot of the CSS is similar to the slide menu left, except we have to move the wrapper as well. Here’s the CSS:
 
-```language-css
+```css
 nav.push-menu-left {
     top: 0;
     width: 300px;
@@ -419,11 +414,9 @@ body.pml-open #wrapper {
 
 ## 6) Push Menu Right
 
-<img class="aligncenter size-full wp-image-466" alt="Push Menu Right" src="http://www.callmenick.com/wp-content/uploads/2014/03/6.png" width="720" height="160">
-
 This menu slides in from the right, and pushes the content to the left. A lot of the CSS is similar to the slide menu right, except we have to move the wrapper as well. Here’s the CSS:
 
-```language-css
+```css
 nav.push-menu-right {
     top: 0;
     width: 300px;
@@ -465,11 +458,9 @@ body.pmr-open #wrapper {
 
 ## 7) Push Menu Top
 
-<img class="aligncenter size-full wp-image-467" alt="Push Menu Top" src="http://www.callmenick.com/wp-content/uploads/2014/03/7.png" width="720" height="120">
-
 This menu slides in from the top, and pushes the content downward. A lot of the CSS is similar to the slide menu top, except we have to move the wrapper as well. Here’s the CSS:
 
-```language-css
+```css
 nav.push-menu-top {
     left: 0;
     width: 100%;
@@ -509,11 +500,9 @@ body.pmt-open #wrapper {
 
 ## 8) Push Menu Bottom
 
-<img class="aligncenter size-full wp-image-468" alt="Push Menu Bottom" src="http://www.callmenick.com/wp-content/uploads/2014/03/8.png" width="720" height="120">
-
 This menu slides in from the bottom, and pushes the content upward. A lot of the CSS is similar to the slide menu bottom, except we have to move the wrapper as well. Here’s the CSS:
 
-```language-css
+```css
 nav.push-menu-bottom {
     left: 0;
     width: 100%;
@@ -555,7 +544,7 @@ body.pmb-open #wrapper {
 
 Now, let’s take a look at the JavaScript to toggle our classes when we hit the different menu buttons. We’ll also display our mask over the rest of the content, and implement some “close menu” functionality when the user clicks the mask or the close-menu button.  Remember, I’m using classie.js to add and remove classes. My JavaScript, of course, is covering all eight menus. You might want to tailor your JavaScript and cut out the unnecessary stuff (unless you’re actually using 8 menus on your site…). Here’s the JavaScript:
 
-```language-javascript
+```javascript
 (function( window ){
 
 	var body = document.body,
@@ -578,6 +567,7 @@ Now, let’s take a look at the JavaScript to toggle our classes when we hit the
 		pushMenuBottom = document.querySelector( ".push-menu-bottom" ),
 		activeNav
 	;
+	
 	mask.className = "mask";
 
 	/* slide menu left */
@@ -658,3 +648,8 @@ Now, let’s take a look at the JavaScript to toggle our classes when we hit the
 ## Wrap Up
 
 There it is! Some nice slide and push menus, ready to drop into your project. I included sample media queries in the source code, so feel free to download it or view the demos by clicking the links below. Also, don’t forget to leave your comments below, and thanks for stopping by!
+
+<p class="text-align--center">
+<a href="http://callmenick.com/tutorial-demos/slide-push-menus/slide-push-menus-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/tutorial-demos/slide-push-menus/" class="button button--inline-block button--medium">View Demo</a>
+</p>
