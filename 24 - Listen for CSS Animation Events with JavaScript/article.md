@@ -1,6 +1,11 @@
-CSS animations are playing a key role nowadays in some of the more cutting edge websites and web apps. But rather than just doing a bunch of animations sporadically, sometimes we want to do animations in sequence. Other times too, we want certain features/functionalities to become available to the user at the beginning or end of the animation. Without frame by frame control, this can be a task. But luckily, we can listen for CSS animation events with JavaScript. Consider the following HTML and CSS:
+<p class="text-align--center">
+<a href="http://www.callmenick.com/tutorial-demos/css-animation-events/css-animation-events-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://www.callmenick.com/tutorial-demos/css-animation-events/" class="button button--inline-block button--medium">View Demo</a>
+</p>
 
-```language-markup
+CSS animations are playing a key role nowadays in some of the more cutting edge websites and web apps. But rather than just doing a bunch of animations sporadically, sometimes we want to do animations in sequence. Other times too, we want certain features/functionalities to become available to the user at the beginning or end of the animation. Without frame by frame control, this can be a task. But luckily, we can listen for CSS animation events with JavaScript. Consider the following HTML:
+
+```html
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,7 +22,9 @@ CSS animations are playing a key role nowadays in some of the more cutting edge 
 </html>
 ```
 
-```language-css
+And some CSS to go along with it:
+
+```css
 #monkey.animate,
 #banana.animate {
     -webkit-animation:myAnimation 1s;
@@ -63,7 +70,7 @@ JavaScript give us three event listeners to play with when it comes to CSS anima
 
 This is amazing, because now we can chain animation events in some neat and concise JavaScript. Here’s an example of these listeners in action:
 
-```language-javascript
+```javascript
 // set the var here
 var monkey = document.querySelector("#monkey");
 
@@ -85,7 +92,7 @@ monkey.addEventListener("animationend",function(e){
 
 Inside the `animationend` listener, we might want to add an `animation` class to our `#banana` div, so it starts animating as soon as the `#monkey` finishes animating. We can plug into some events inside the listener also. An example of an event is the `elapsedTime`, which will be 0 at the start of the animation, will log the time at the beginning of each subsequent iteration inside `animationiteration`, and will be the final time inside `animationend`. Here’s an example of how we would achieve this:
 
-```language-javascript
+```javascript
 // listen for animation iteration
 monkey.addEventListener("animationiteration",function(e){
 	console.log(e.elapsedTime);
@@ -104,7 +111,7 @@ Of course, all browsers have their prefixes to be aware of. So we’re looking a
 
 It would be such a chore to have to prefix each event listener 5 times every time you wanted to perform a function. Luckily, we can just use a helper function to take care of it for us. Here’s the helper function, and what our new event listener would look like:
 
-```language-javascript
+```javascript
 // prefixer helper function
 var pfx = ["webkit", "moz", "MS", "o", ""];
 function prefixedEventListener(element, type, callback) {
@@ -126,3 +133,8 @@ And that’s it! With all this in mind, and a solid grasp on keyframe animations
 ## CSS Animation Events Testing
 
 For your benefit, I’ve created a test area where you can start an animation sequence. A “console” div gets logged with all the info of what’s happening in the animation sequence. The links to the source code and demo are for this sequence, so feel free to download and mess around with them to get familiar with how the event listeners are working. Thanks for reading, and if you have any questions/comments/suggestions, feel free to leave them below!
+
+<p class="text-align--center">
+<a href="http://www.callmenick.com/tutorial-demos/css-animation-events/css-animation-events-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://www.callmenick.com/tutorial-demos/css-animation-events/" class="button button--inline-block button--medium">View Demo</a>
+</p>
