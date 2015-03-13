@@ -4,7 +4,7 @@ With the touch screen market booming, us web developers have to constantly find 
 
 Modernizr will inject a `.no-touch` class into our HTML tag at the beginning of the document, reflecting that the browser does not have touch event capabilities. So we will target our CSS like this:
 
-```language-css
+```css
 .no-touch figure:hover,
 figure.hover {
     /* your css hover stuff here */
@@ -19,7 +19,7 @@ Let’s assume we want to target all figure elements in our project. The CSS tar
 
 In the JavaScript, we’re going to look for touch capabilities with Modernizr. If touch is enabled, we look out for touchstart. But we need to be careful. If the user moves their finger, we want to cancel the whole process. In other words, we only want to add our .hover class if the user performs a touchstart and touchend without a touchmove in between. I’m using the classie.js library for adding and removing classes with ease. Let’s look at the JavaScript.
 
-```language-javascript
+```javascript
 (function(window){
 
 	// check for touch
