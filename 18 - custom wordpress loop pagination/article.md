@@ -17,7 +17,7 @@ First, let’s head over to the class reference for WP_Query. Here, we can see e
 
 To get started, you should read the interacting with WP_Query section to know how you can interact with it once you’ve set it up. Let’s take a look at the basic usage that is documented on the class reference page.
 
-```language-php
+```php
 <?php 
 // the query
 $the_query = new WP_Query( $args ); ?>
@@ -58,7 +58,7 @@ Our arguments variable can be passed in as an array, so let’s do that. We’ll
 
 The type parameter allows us to show posts associated with certain type. There are a few available as seen in the documentation. In our case, we’re looking for a post. Luckily for us, this is the default type if you specify none, so we don’t actually need to specify it. But for the sake of redundancy and getting ourselves familiar, we’re going to set it anyway. So far, our arguments variable will look like this:
 
-```language-php
+```php
 $query_args = array(
   'post_type' => 'post'
 );
@@ -70,7 +70,7 @@ Now, let’s set our category parameter. We’ll go check out the “category pa
 
 We know we want to display only posts from our category “Tutorials”, so let’s look at what’s available to us. We can immediately see that we have a parameter at our disposal that we can use. This is the “category_name” parameter. From the definition, we see that this parameter requires the category slug, not the actual name. In our WordPress admin panel, we can get the slug for our category in question. In this case, it is “tutorials”. We can now add this into our arguments variable, which should now look like this:
 
-```language-php
+```php
 $query_args = array(
   'post_type' => 'post',
   'category_name' => 'tutorials'
@@ -83,7 +83,7 @@ Let’s now take a look at displaying only a certain number of posts per page, a
 
 This part of the `WP_Query` tends to confuse people, but we’re going to look into it and make it very simple. The first thing we want to do is limit the number of posts that show up on each page of our paginated query. To do this, we use the highly self explanatory “posts_per_page” parameter. In our case, we want 5 posts to show up per page. Our query will now look like this:
 
-```language-php
+```php
 $query_args = array(
   'post_type' => 'post',
   'category_name' => 'tutorials',
@@ -103,7 +103,7 @@ $query = new WP_Query( array( 'paged' => $paged ) );`
 
 How simple is that? They’ve given us the parameter we need to include in our query in order to allow for pagination. Now, our query should look like this for static home pages:
 
-```language-php
+```php
 $paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
 $query_args = array(
   'post_type' => 'post',
@@ -115,7 +115,7 @@ $query_args = array(
 
 Remember, for custom pages that are NOT static home pages, the `$paged` variable changes to this:
 
-```language-php
+```php
 $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 ```
 
@@ -125,7 +125,7 @@ And with that, we’re ready to set up our loop, do our pagination checks, and d
 
 Now, it’s time to construct the loop. Once we start the loop, we’ll have access to a host of WordPress functions that will allow us to display things like the title of the post, the post excerpt, and the post content. For the sake of simplicity, we’ll just output the post title. Of course, you might want to show more than this, so dig through the WordPress Function Reference for a host of functions available to you. Let’s take a look at “The Loop” documentation on the WordPress codex. After a quick glance, we can see that the loop is initialised like this:
 
-```language-php
+```php
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <!-- some code here -->
 <?php endwhile; else: ?>
@@ -135,7 +135,7 @@ Now, it’s time to construct the loop. Once we start the loop, we’ll have acc
 
 This is the basic loop syntax, but because we’re using our custom query, we have to access the loop using our query variable that represents a new instance of `WP_Query`. From above, our query instance is noted by the variable  `$the_query`. Our loop, in this case, should look like this:
 
-```language-php
+```php
 <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
   <!-- some code here -->
 <?php endwhile; else: ?>
@@ -145,7 +145,7 @@ This is the basic loop syntax, but because we’re using our custom query, we ha
 
 The above set of code provides a certain set of functionality. First, it checks if any posts have been delivered as a result of our custom query. If this is true, and we have posts, we enter into a while loop. The while loop loops through our query, and then performs a set of code for each post returned. This is where we can output things like each post title etc. If no posts have been returned as a result of our query, we enter the else part of the block, and return an error statement notifying the user that no posts exist based on the query. Let’s enhance this loop a bit, and make it a bit more user friendly so it actually displays something if we have posts. Using the WordPress function `the_title()`, we’ll output the title of each post returned. Our loop now looks like this:
 
-```language-php
+```php
 <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
   <h1><?php echo the_title(); ?></h1>
 <?php endwhile; else: ?>
@@ -174,7 +174,7 @@ Now, our full custom query, with simple pagination links (i.e. links pointing to
 
 ### Static Home Page
 
-```language-php
+```php
 <?php
   // set up or arguments for our custom query
   $paged = ( get_query_var('page') ) ? get_query_var('page') : 1;
@@ -218,7 +218,7 @@ Now, our full custom query, with simple pagination links (i.e. links pointing to
 
 ### Custom Static Page (that isn’t home page)
 
-```language-php
+```php
 <?php
   // set up or arguments for our custom query
   $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
@@ -260,15 +260,7 @@ Now, our full custom query, with simple pagination links (i.e. links pointing to
 <?php endif; ?>
 ```
 
-Our loop will now look like this on the first page our our posts:
-
-<img class="aligncenter size-full wp-image-389" src="http://www.callmenick.com/wp-content/uploads/2014/02/layout-1.jpg" alt="layout-1" width="720" height="280" />
-
-And it will look like this on pages that have older posts, and hence older/newer posts links:
-
-<img class="aligncenter size-full wp-image-390" src="http://www.callmenick.com/wp-content/uploads/2014/02/layout-2.jpg" alt="layout-2" width="720" height="280" />
-
-This is cool, and it works, but what if we wanted a more advanced pagination structure? What if we wanted to display the number of pages, links to the actual page numbers themselves, and links to the last and first pages if we have a lot of pages? For this, we need to write a slightly more complex function based on the same principals as above. We know some things already that will help us:
+Now we've generated links to previous and next pages. This is cool, and it works, but what if we wanted a more advanced pagination structure? What if we wanted to display the number of pages, links to the actual page numbers themselves, and links to the last and first pages if we have a lot of pages? For this, we need to write a slightly more complex function based on the same principals as above. We know some things already that will help us:
 
 * We can check if pagination exists
 * We can check the max number of pages or query returns based on the number of posts returned vs the number of posts per page being displayed
@@ -285,7 +277,7 @@ We want to create a function that accepts three values:
 
 We also want our function to have fallback values, so that we can use this function in any custom query we set up, and also on any pages that have global queries in place (for example a category archive page). So far, our function should look like this:
 
-```language-php
+```php
 function custom_pagination($numpages = '', $pagerange = '', $paged='') {
  
   if (empty($pagerange)) {
@@ -329,7 +321,7 @@ If we read through, we notice that the function takes on an array of arguments. 
 
 Our arguments should now look like this:
 
-```language-php
+```php
 /** 
  * We construct the pagination arguments to enter into our paginate_links
  * function. 
@@ -353,7 +345,7 @@ $pagination_args = array(
 
 Finally, let’s output everything. We pass our arguments into the function paginate_links, which will return a pagination structure if we have more than one page. We can then check if paginate_links  returns anything, and if so, run the output including some additional stuff like “page x of y”. We’ll add a few CSS classes, and also check the classes of our output, and add styles to our stylesheet accordingly. We should have something looking like this:
 
-```language-php
+```php
 $paginate_links = paginate_links($pagination_args);
 
 if ($paginate_links) {
@@ -364,9 +356,7 @@ if ($paginate_links) {
 }
 ```
 
-With some CSS, our pagination structure should now look a little like this:
-
-<img class="aligncenter size-full wp-image-391" src="http://www.callmenick.com/wp-content/uploads/2014/02/layout-3.jpg" alt="layout-3" width="720" height="180" />
+Don't forget, you'll need to add a little bit of CSS to make it look pretty.
 
 ## The Full Code
 
@@ -374,7 +364,7 @@ Let’s take a look at the full code for custom paginate queries on a static hom
 
 ### Static Home Page
 
-```language-php
+```php
 <?php
 /**
  * Template Name: Home Page
@@ -430,7 +420,7 @@ Let’s take a look at the full code for custom paginate queries on a static hom
 
 ### Custom Page That Isn’t Static Home Page
 
-```language-php
+```php
 <?php
 /**
  * Template Name: Custom Page
@@ -485,7 +475,7 @@ Let’s take a look at the full code for custom paginate queries on a static hom
 
 ### Function.php File
 
-```language-php
+```php
 function custom_pagination($numpages = '', $pagerange = '', $paged='') {
  
   if (empty($pagerange)) {
@@ -547,7 +537,7 @@ function custom_pagination($numpages = '', $pagerange = '', $paged='') {
 
 ### Style.css File
 
-```language-css
+```css
 /* ============================================================
   CUSTOM PAGINATION
 ============================================================ */
