@@ -1,10 +1,15 @@
+<p class="text-align--center">
+<a href="http://callmenick.com/tutorial-demos/resize-header-on-scroll/resize-header-on-scroll.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/tutorial-demos/resize-header-on-scroll/" class="button button--inline-block button--medium">View Demo</a>
+</p>
+
 We’re going to create an animated resizing header on scroll. An animated header that resizes on scroll is a neat touch to sites that have simple navigation structures. The animated resizing functionality, combined with the fixed header positioning, gives a smooth experience to the user while allowing more viewing space on the screen as the user scrolls down a bit. Let’s get started by looking at what we need to achieve our goal.
 
 ## Getting Started
 
 To start with, it’s important to note that this functionality requires a `fixed` position header. For browsers that don’t support  fixed positioning, or are buggy in its implementation, you need to consider a fallback. To check compatibility, visit [Can I Use](http://caniuse.com/). I also used the classie.js javascript library for quick adding/removing/checking of classes on elements in the DOM. Let’s now take a look at our HTML markup. The markup consists of a header with a logo and navigation, some sections of text, and a footer.
 
-```language-markup
+```html
 <header>
     <div class="container clearfix">
         <h1 id="logo">
@@ -23,7 +28,7 @@ To start with, it’s important to note that this functionality requires a `fixe
 
 The HTML is fairly straightforward. We have a logo and navigation menu inside a header tag. It’s up to you of course how you structure your header…this is just for display purposes. Now, let’s get into the CSS.
 
-```language-css
+```css
 header {
     width: 100%;
     height: 150px;
@@ -131,7 +136,7 @@ The logo and navigation items are given a line height of the header’s height (
 
 Finally, I added some example media queries so that our animated resizing header will work across all devices and screen sizes. Now, let’s make the magic happen. We’re going to use javascript to add and remove the class smaller when we scroll a certain amount. Adding and removing this class will animate our header.
 
-```language-javascript
+```javascript
 function init() {
     window.addEventListener('scroll', function(e){
         var distanceY = window.pageYOffset || document.documentElement.scrollTop,
@@ -156,3 +161,8 @@ In our JS, we look out for a scroll event. We set a distance of 300px to be our 
 ## Wrap Up
 
 That’s a wrap! Of course, it’s up to you to change the sizes, dimensions, and content of your header and implement it into your site. But with the knowledge presented here, you can easily implement this animated resizing header into your next project. Thanks for checking it out, and feel free to view the demo, download the source, and leave any comments below.
+
+<p class="text-align--center">
+<a href="http://callmenick.com/tutorial-demos/resize-header-on-scroll/resize-header-on-scroll.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/tutorial-demos/resize-header-on-scroll/" class="button button--inline-block button--medium">View Demo</a>
+</p>
