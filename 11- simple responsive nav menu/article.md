@@ -1,10 +1,15 @@
+<p class="text-align--center">
+<a href="http://callmenick.com/lab-demos/10-simple-responsive-navigation/simple-responsive-navigation.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/lab-demos/10-simple-responsive-navigation/" class="button button--inline-block button--medium">View Demo</a>
+</p>
+
 In this lab, we build a simple responsive navigation menu using HTML, CSS, and a bit of jQuery. This navigation menu is one level deep, and at a certain screen width, it will turn into a neat “menu” button. When we click this button, the navigation will be toggled.
 
 ## Getting Started
 
 With the web being accessed across various devices with various screen sizes, it’s important we adapt and start building responsively. Navigation menus are important on any website, but can sometimes look obtrusive on small devices. A neat little trick for mobile devices is to have a button that toggles the navigation menu at smaller screen widths, while showing the full menu at larger screen widths. With some neat CSS styles and some help from jQuery, we can achieve this easily. First of all, let’s take a look at some HTML markup.
 
-```language-markup
+```html
 <nav id="nav-main">
     <ul>
         <li><a href="">Home</a></li>
@@ -29,7 +34,7 @@ In our markup, we see 3 things going on. The first is our navigation menu, set i
 
 So how do we get the main menu contents into the navigation menu? jQuery, of course. But first, a little bit of CSS.
 
-```language-css
+```css
 /* =Nav
 -------------------------------------------------------------- */
 #nav-trigger {
@@ -132,7 +137,7 @@ Our main navigation is a straightforward unordered list. The styling applied to 
 
 Now, further down in the CSS, we look at our media query. After some experimenting, I noticed that an optimum screen width for my navigation to transform into the mobile version would be at 900px. Therefore, at this width, I change the display properties of the main navigation, mobile navigation, and navigation trigger, so that the main `nav` is hidden, and the mobile `nav` and trigger are now visible. Remember, we set our mobile navigation unordered list to be hidden by default too, so even though the mobile `nav` is now displayed, the list itself is hidden from view. We want this functionality because we only want the list to slide down into view when the navigation trigger is clicked. So how do we achieve this final piece of functionality? We use a little bit of Javascript/jQuery! Here is is -
 
-```language-javascript
+```javascript
 $(document).ready(function(){
     $("#nav-mobile").html($("#nav-main").html());
     $("#nav-trigger span").click(function(){
@@ -160,3 +165,8 @@ Then, we look for a click event on the navigation trigger. When it is clicked, w
 ## Wrap Up
 
 And there you have it! A simple, one-level, responsive navigation menu, that functions nicely and fits neatly across all device screen sizes. I hope you enjoyed this tutorial! Feel free to download the source or view the demo by clicking the links below, and leave any questions, feedback, or comments below too.
+
+<p class="text-align--center">
+<a href="http://callmenick.com/lab-demos/10-simple-responsive-navigation/simple-responsive-navigation.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/lab-demos/10-simple-responsive-navigation/" class="button button--inline-block button--medium">View Demo</a>
+</p>
