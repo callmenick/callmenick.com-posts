@@ -1,10 +1,15 @@
+<p class="text-align--center">
+<a href="http://callmenick.com/lab-demos/14-tabbed-content/14-tabbed-content.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/lab-demos/14-tabbed-content/" class="button button--inline-block button--medium">View Demo</a>
+</p>
+
 Our tabbed contend area is based on a simple user interaction. We have some tabs that act as a navigation, and some content areas (`sections`) that are controlled by these tabs. When one tab is selected, it is highlighted and the corresponding `section` is shown, while the rest of the sections are hidden.
 
 ## Getting Started
 
 The structure of our tabbed content area will be simple. We’ll have one unordered list that acts as the tabs, and another unordered list that acts as the sections. Our tabs list will control which section is being shown, by using a bit of jQuery magic and the CSS property display. The active section will also be indicated by the corresponding tab being highlighted. Let’s take a look at the HTML markup.
 
-```language-markup
+```html
 <ul id="tabs">
     <li class="active">Tab 1</li>
     <li>Tab 2</li>
@@ -35,7 +40,7 @@ The structure of our tabbed content area will be simple. We’ll have one unorde
 
 Here, we see a basic structure for two unordered lists. The `#tabs` list acts as the navigation control, and the `#tab` list acts as the section control. We notice that the first li  element in both lists has a class of active. This is to initialise our tabbed area, as the rest of the sections will be hidden, and the rest of the tabs will be inactive. Let’s now take a look at the CSS, which will style our tabs nicely, and hide our section contents that are inactive. Without further ado, the CSS!
 
-```language-css
+```css
 ul#tabs {
     list-style-type: none;
     padding: 0;
@@ -73,7 +78,7 @@ ul#tab li.active {
 
 We style our tabs to be simple inline-style tabs using the CSS property `inline-block`. We also give the active tab its own style, so we can see which tab is currently being displayed. We then style our tabbed content area as block-style elements by using `display:block`, but we hide all of them initially using `display:none`. Now, time to make it all work. Here’s the jQuery that’ll handle it.
 
-```language-javascript
+```javascript
 $(document).ready(function(){
     $("ul#tabs li").click(function(e){
         if (!$(this).hasClass("active")) {
@@ -95,3 +100,8 @@ Our simple jQuery function above lets us show and hide the correct content area 
 ## Wrap Up
 
 And there you have it! A simple tabbed content area, using CSS and jQuery. It’s highly customizable, and you can easily drop it into any of your projects. Thanks for checking it out, and feel free to download the source code or leave any comments/questions below.
+
+<p class="text-align--center">
+<a href="http://callmenick.com/lab-demos/14-tabbed-content/14-tabbed-content.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/lab-demos/14-tabbed-content/" class="button button--inline-block button--medium">View Demo</a>
+</p>
