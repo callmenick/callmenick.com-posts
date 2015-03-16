@@ -1,10 +1,15 @@
+<p class="text-align--center">
+<a href="http://callmenick.com/lab-demos/7-single-page-smooth-scroll/single-page-smooth-scroll-soure.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/lab-demos/7-single-page-smooth-scroll" class="button button--inline-block button--medium">View Demo</a>
+</p>
+
 In this lab, I’m going to demonstrate how to create a fixed navigation, single page site with smooth scrolling, and highlighting the navigation link depending on which section is currently being viewed. This technique is great for single page sites that want to pack in lots of goodies on one page, but use a navigation with cool scrolling to section it off. Let’s get started.
 
 ## Getting Started With The Markup
 
 The markup is fairly easy. We’re going to use a standard two column floated display. The navigation will be in the left sidebar, and the main content will be in the right content column. Here’s a look at the html.
 
-```language-markup
+```html
 <div id="main">
     <div class="container clearfix">        
         <div id="sidebar">
@@ -44,7 +49,7 @@ The markup is fairly easy. We’re going to use a standard two column floated di
 
 Using standard CSS methods, we create a two column layout. Looking at the HTML, we see that our navigation is nested in a `nav` tag, and inside that tag is an unordered list. Inside our content `div`, we separate the main sections of content using `section` tags. There are a few extra CSS classes that we will declare. One is `.nav-active`, which we will use to highlight the navigation item that is currently being viewed. Also, `nav.stick` will be used to pin our navigation to the top of the page after scrolling. Note, I also used `box-sizing:border-box` on all elements in a master style sheet. Our CSS should look something like this.
 
-```language-css
+```css
 #sidebar {
     width:300px;
     float:left;
@@ -99,7 +104,7 @@ Next, using the JQuery plugin [scrollto.js](http://flesler.blogspot.com/2007/10/
 
 Now for the fun part. We create an array of all our `nav a href’s`. We then use some calculations using the scroll function. We find the `section id`, calculate it’s height, see if it’s greater or less than the value from the window top, and if the window falls in between, we add a class `nav-active` to the list item in question. We create a conditional also, because if the top of a section is not reached and the page can’t scroll anymore, we want to highlight this section. Here’s what our JavaScript looks like.
 
-```language-javascript
+```javascript
 $(document).ready(function(){
 
     /** 
@@ -169,3 +174,8 @@ $(document).ready(function(){
 ## Wrap Up
 
 Here, we see the versatility of the `scroll()` function from JQuery. The possibilities are endless by manipulating it, and this is a great example of using it. Don’t forget to check out the demo or download the source by clicking the links below, and feel free to leave a comment if you have any feedback or questions.
+
+<p class="text-align--center">
+<a href="http://callmenick.com/lab-demos/7-single-page-smooth-scroll/single-page-smooth-scroll-soure.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/lab-demos/7-single-page-smooth-scroll" class="button button--inline-block button--medium">View Demo</a>
+</p>
