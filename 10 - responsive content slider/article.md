@@ -1,3 +1,8 @@
+<p class="text-align--center">
+<a href="http://callmenick.com/lab-demos/9-responsive-content-slider/responsive-content-slider-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/lab-demos/9-responsive-content-slider/" class="button button--inline-block button--medium">View Demo</a>
+</p>
+
 In this lab, I’m going to make a responsive content slider using HTML, CSS, and Javascript (jQuery). It’ll be a jQuery plugin, and will be able to work on any div that takes on a certain markup. A content slider is a great way of displaying linear information in a neat, concise manner. Enjoy!
 
 ## Getting Started
@@ -12,7 +17,7 @@ The markup will go as follows -
 
 This is what our markup will look like -
 
-```language-markup
+```html
 <section id="cslide-slides" class="cslide-slides-master clearfix container">
     <div class="cslide-prev-next clearfix">
         <span class="cslide-prev">prev slide</span>
@@ -58,7 +63,7 @@ For our plugin to work, the markup must follow a structure. We want all our slid
 
 Now, let’s dig into our CSS a bit. Remembering what we just looked at above, here’s what our CSS might look like. Remember, I’m using the box-sizing:border-box property (with the necessary prefixes and polyfills) throughout my stylesheet for easy padded divs.
 
-```language-css
+```css
 #cslide-slides h2 {
 	margin-bottom:10px;
 	font-weight: 700;
@@ -135,7 +140,7 @@ Everything here is fairly straightforward. You may be wondering why we didn’t 
 
 This is where the slideshow ticks. We’re going to make a jQuery function that we can apply to any div that has the above markup. In our case, that div is `#cslide-slides`, and we want to call our function on it like this -
 
-```language-javascript
+```javascript
 $(document).ready(function(){
     $("#cslide-slides").cslide();
 });
@@ -143,7 +148,7 @@ $(document).ready(function(){
 
 Before we get into our JS, let’s take a look at the code. We’re creating a function, and calling it `cslide`. This function calculates the number of slides, sets the parent width, sets the slide width, then sets the visibility of the slides container. Then, it handles the clicking of previous and next buttons, disabling them when necessary. Because we always start on slide 1, the previous button is disabled from the start. Here’s what the code for our function looks like -
 
-```language-javascript
+```javascript
 (function($) {
 
     $.fn.cslide = function() {
@@ -244,3 +249,8 @@ Here’s the order in which our function is performing -
 ## Wrap Up
 
 And there you have it. A neat jQuery function that allows  you to create as many responsive content sliders as you want, as long as they have unique id’s and follow a certain markup.
+
+<p class="text-align--center">
+<a href="http://callmenick.com/lab-demos/9-responsive-content-slider/responsive-content-slider-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/lab-demos/9-responsive-content-slider/" class="button button--inline-block button--medium">View Demo</a>
+</p>
