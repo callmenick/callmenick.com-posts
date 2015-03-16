@@ -1,10 +1,15 @@
+<p class="text-align--center">
+<a href="http://www.callmenick.com/tutorial-demos/image-overlay-hover-effects/image-overlay-hover-effects-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://www.callmenick.com/tutorial-demos/image-overlay-hover-effects" class="button button--inline-block button--medium">View Demo</a>
+</p>
+
 Image overlay hover effects with CSS3 transitions are a great way to add some nice interactivity on your site. In the old days, a little pointer cursor would do the trick for indicating to the user that an image was clickable to view more information. Nowadays, we want some smooth transitions and some UI icons to prompt the user. In our case, we’re going to have a series of images. When the user hovers over an image, a semi-transparent black background transitions in over the image, along with a “+” icon. This will indicate to the user that they can click the image for things like more info, a larger view of the image, etc. Let’s get started!
 
 ## Diving In
 
 For the tutorial post, I’m only going to explain and go through one overlay hover effect. If you get the source though, you’ll have full access to all the CSS/markup that covers all 6 transitions in the demo. Without further ado, let’s look at the HTML markup for one of the transitions.
 
-```language-markup
+```html
 <div id="effect-1" class="effects clearfix">
     <div class="img">
         <img src="img/jpg/1.jpg" alt="">
@@ -45,17 +50,9 @@ Instead of using the CSS pseudo class :hover, we’re going to check it with Jav
 
 In the case of touch devices, we want to give the user the option of hiding the overlay. We’ll present a little close button inside the overlay that defaults to a hidden display. If touch is sensed by Modernizr though, we’ll show the close button, which will close the overlay. This isn’t necessary for hovering, because when the mouse leaves the area, the overlay will transition out.
 
-We want our hover effect to look like this on mouse enabled devices (like laptops and computers):
-
-<img class="aligncenter size-full wp-image-399" src="http://www.callmenick.com/wp-content/uploads/2014/03/mouse-device.png" alt="mouse-device" width="720" height="220" />
-
-and like this on touch enabled devices (like tablets):
-
-<img class="aligncenter size-full wp-image-400" src="http://www.callmenick.com/wp-content/uploads/2014/03/touch-device.png" alt="touch-device" width="720" height="220" />
-
 First, let’s take a look at all the common CSS:
 
-```language-css
+```css
 /* ============================================================
   GLOBAL
 ============================================================ */
@@ -133,7 +130,7 @@ a.expand {
 
 Nice! We’ve styled our overlay, our link button, and our close overlay button. Now, let’s look at the CSS for the Slide In Bottom effect, i.e. effect 1:
 
-```language-css
+```css
 /* ============================================================
   EFFECT 1 - SLIDE IN BOTTOM
 ============================================================ */
@@ -161,7 +158,7 @@ Each image and overlay is wrapped in a relatively positioned div. This allows us
 
 Now, let’s look at the JS that will bring our transitions to life on hover or on click, depending on what device the user is on. Remember, you must include Modernizr to detect touch as much as possible. This isn’t however a bulletproof method, but it covers quite a lot.
 
-```language-javascript
+```javascript
 $(document).ready(function(){
     if (Modernizr.touch) {
         // show the close overlay button
@@ -208,3 +205,7 @@ Using the above techniques, the transition of the overlay can happen any way you
 Special thanks to [Marco Goran Romano](http://dribbble.com/goranfactory) for the sweet imagery.
 
 
+<p class="text-align--center">
+<a href="http://www.callmenick.com/tutorial-demos/image-overlay-hover-effects/image-overlay-hover-effects-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://www.callmenick.com/tutorial-demos/image-overlay-hover-effects" class="button button--inline-block button--medium">View Demo</a>
+</p>
