@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://www.callmenick.com/tutorial-demos/css-animation-events/css-animation-events-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://www.callmenick.com/tutorial-demos/css-animation-events/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/css-animation-events/css-animation-events-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/css-animation-events/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 CSS animations are playing a key role nowadays in some of the more cutting edge websites and web apps. But rather than just doing a bunch of animations sporadically, sometimes we want to do animations in sequence. Other times too, we want certain features/functionalities to become available to the user at the beginning or end of the animation. Without frame by frame control, this can be a task. But luckily, we can listen for CSS animation events with JavaScript. Consider the following HTML:
@@ -135,6 +135,6 @@ And that’s it! With all this in mind, and a solid grasp on keyframe animations
 For your benefit, I’ve created a test area where you can start an animation sequence. A “console” div gets logged with all the info of what’s happening in the animation sequence. The links to the source code and demo are for this sequence, so feel free to download and mess around with them to get familiar with how the event listeners are working. Thanks for reading, and if you have any questions/comments/suggestions, feel free to leave them below!
 
 <p class="text-align--center">
-<a href="http://www.callmenick.com/tutorial-demos/css-animation-events/css-animation-events-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://www.callmenick.com/tutorial-demos/css-animation-events/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/css-animation-events/css-animation-events-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/css-animation-events/" class="button button--inline-block button--medium">View Demo</a>
 </p>

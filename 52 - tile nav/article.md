@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://callmenick.com/tutorial-demos/tile-navigation/tile-navigation-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/tile-navigation/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/tile-navigation/tile-navigation-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/tile-navigation/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 ## Introduction
@@ -172,6 +172,6 @@ I also implemented some basic javascript required to get the navigation toggle t
 With the current host of CSS techniques at our disposal, we’re able to easily achieve layouts like this. We’re also able to add a little action to it with some implementation of CSS3 transitions. Don’t stop there though…try making the tiles even more attractive. Add some icons, some borders maybe, and play around with different animation techniques. There are lots of possibilities! I hope you enjoyed this tutorial, and don’t forget you can download the source and view the demo by clicking the links below! If you have any questions, comments, or feedback, feel free to leave them below. Thanks for stopping by.
 
 <p class="text-align--center">
-<a href="http://callmenick.com/tutorial-demos/tile-navigation/tile-navigation-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/tile-navigation/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/tile-navigation/tile-navigation-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/tile-navigation/" class="button button--inline-block button--medium">View Demo</a>
 </p>

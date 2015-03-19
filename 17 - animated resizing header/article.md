@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://callmenick.com/tutorial-demos/resize-header-on-scroll/resize-header-on-scroll.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/resize-header-on-scroll/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/resize-header-on-scroll/resize-header-on-scroll.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/resize-header-on-scroll/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 We’re going to create an animated resizing header on scroll. An animated header that resizes on scroll is a neat touch to sites that have simple navigation structures. The animated resizing functionality, combined with the fixed header positioning, gives a smooth experience to the user while allowing more viewing space on the screen as the user scrolls down a bit. Let’s get started by looking at what we need to achieve our goal.
@@ -163,6 +163,6 @@ In our JS, we look out for a scroll event. We set a distance of 300px to be our 
 That’s a wrap! Of course, it’s up to you to change the sizes, dimensions, and content of your header and implement it into your site. But with the knowledge presented here, you can easily implement this animated resizing header into your next project. Thanks for checking it out, and feel free to view the demo, download the source, and leave any comments below.
 
 <p class="text-align--center">
-<a href="http://callmenick.com/tutorial-demos/resize-header-on-scroll/resize-header-on-scroll.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/resize-header-on-scroll/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/resize-header-on-scroll/resize-header-on-scroll.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/resize-header-on-scroll/" class="button button--inline-block button--medium">View Demo</a>
 </p>

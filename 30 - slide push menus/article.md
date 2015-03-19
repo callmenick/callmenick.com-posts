@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://callmenick.com/tutorial-demos/slide-push-menus/slide-push-menus-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/slide-push-menus/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/slide-push-menus/slide-push-menus-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/slide-push-menus/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 ## Getting Started
@@ -650,6 +650,6 @@ Now, let’s take a look at the JavaScript to toggle our classes when we hit the
 There it is! Some nice slide and push menus, ready to drop into your project. I included sample media queries in the source code, so feel free to download it or view the demos by clicking the links below. Also, don’t forget to leave your comments below, and thanks for stopping by!
 
 <p class="text-align--center">
-<a href="http://callmenick.com/tutorial-demos/slide-push-menus/slide-push-menus-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/slide-push-menus/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/slide-push-menus/slide-push-menus-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/slide-push-menus/" class="button button--inline-block button--medium">View Demo</a>
 </p>

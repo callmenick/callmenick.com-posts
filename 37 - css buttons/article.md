@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://callmenick.com/tutorial-demos/stylish-css-buttons/stylish-css-buttons-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/stylish-css-buttons/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/stylish-css-buttons/stylish-css-buttons-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/stylish-css-buttons/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 Out with the old, in with the new. We’re in a day and age where we need to simplify our stylesheets and lighten our page loads to be efficient across all devices on all connections. There’s a balance between simplicity and beauty though. We of course want to be functional and progressive, but also want to be aesthetically pleasing. There was once a time when graded images with shadows, hover states, and active states were used as buttons. It added some user-friendliness to our forms and whatnot. Nowadays, with CSS3 in the fold and a more compact, minimal style taking precedence, we can achieve stylish CSS buttons. The reason for switching to pure CSS is twofold -
@@ -184,6 +184,6 @@ section.press button.active {
 And there you go! Stylish, elegant, and funky CSS buttons for all your needs. They are highly customisable, scalable, and easy to use. There are some basic CSS media queries in the source folder, but you might want to use your own sizing/media queries in your project. Don’t forget, you can download the source or view the demo by clicking the links below. Thanks for reading, and feel free to leave any comments, suggestions, or opinions below!
 
 <p class="text-align--center">
-<a href="http://callmenick.com/tutorial-demos/stylish-css-buttons/stylish-css-buttons-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/stylish-css-buttons/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/stylish-css-buttons/stylish-css-buttons-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/stylish-css-buttons/" class="button button--inline-block button--medium">View Demo</a>
 </p>

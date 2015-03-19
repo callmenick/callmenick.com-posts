@@ -1,11 +1,11 @@
 <p class="text-align--center">
 <a href="https://github.com/callmenick/Draw-Fill-SVG" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/draw-fill-svg/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/draw-fill-svg/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 ## Introducing SVG
 
-SVG stands for "scalable vector graphics", and that means we can scale SVG's as much as we want without losing any quality. When you output an SVG in your document, it looks similar to HTML - a bunch of tags with attributes. That's because SVG is XHTML, and we can target these tags and dynamically alter their attributes. For a more in depth look at the fundamentals of inline SVG, check out my previous tutorial ["Getting Started With Inline SVG"](http://callmenick.com/2014/10/19/getting-started-inline-svg/).
+SVG stands for "scalable vector graphics", and that means we can scale SVG's as much as we want without losing any quality. When you output an SVG in your document, it looks similar to HTML - a bunch of tags with attributes. That's because SVG is XHTML, and we can target these tags and dynamically alter their attributes. For a more in depth look at the fundamentals of inline SVG, check out my previous tutorial ["Getting Started With Inline SVG"](http://callmenick.com/posts/getting-started-inline-svg/).
 
 ## About This Plugin
 
@@ -317,5 +317,5 @@ Licensed under the MIT license - http://www.opensource.org/licenses/mit-license.
 
 <p class="text-align--center">
 <a href="https://github.com/callmenick/Draw-Fill-SVG" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/draw-fill-svg/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/draw-fill-svg/" class="button button--inline-block button--medium">View Demo</a>
 </p>

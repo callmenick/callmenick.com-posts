@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://callmenick.com/tutorial-demos/css-equal-height-columns/css-equal-height-columns-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/css-equal-height-columns/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/css-equal-height-columns/css-equal-height-columns-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/css-equal-height-columns/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 Achieving equal height columns with just CSS is such a common scenario with a few simple solutions. In projects that follow a standard content-sidebar layout, it just helps to have both of the containers seemingly stretch to the bottom of the page. It just looks better, cleaner, and more complete. I’m going to highlight three different ways that this can be achieved, using strictly CSS. No JavaScript, no jQuery to calculate the height of one and set it on the other. Just plain old beautiful CSS.
@@ -249,6 +249,6 @@ Support for the CSS flexible box layout (flexbox) is on the rise, and that’s a
 There are probably more ways than above out there to achieve equal height columns. The above demonstrates just how easy it can be with plain old CSS, of different varieties. The best solution is always what works best for you though! I hope you enjoyed this tutorial, and feel free to leave any feedback below!
 
 <p class="text-align--center">
-<a href="http://callmenick.com/tutorial-demos/css-equal-height-columns/css-equal-height-columns-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/css-equal-height-columns/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/css-equal-height-columns/css-equal-height-columns-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/css-equal-height-columns/" class="button button--inline-block button--medium">View Demo</a>
 </p>

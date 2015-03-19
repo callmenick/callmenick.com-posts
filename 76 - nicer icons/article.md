@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://callmenick.com/development/icons-css3-transitions/icons-css3-transitions-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/development/icons-css3-transitions/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/icons-css3-transitions/icons-css3-transitions-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/icons-css3-transitions/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 Icons. They exist everywhere, in all our apps and websites these days, and they all perform important functions. They guide users into various interactions, or send them to external links such as various social media platforms. Icon sprites are commonplace and important from a development standpoint, and allow us to engage users a bit with hover classes. These hover classes have the potential to add a neat layer of interactivity and style to our apps/sites. In this tutorial, I'm going to guide you through 5 different icon hover states, each utilizing CSS3 transitions and transforms, engaging the end users a bit more, and possibly leading to higher click-through rates.
@@ -125,7 +125,7 @@ If we have a sprite, and each icon has two versions (a grey and a white in this 
 }
 ```
 
-For quick reference, head to the demo link for this style [here](http://callmenick.com/development/icons-css3-transitions/index.html).
+For quick reference, head to the demo link for this style [here](http://callmenick.com/_development/icons-css3-transitions/index.html).
 
 ## Style 2 – Upward Nudge With Transitioning Border
 
@@ -227,7 +227,7 @@ In previous experiments, I've noticed that borders don't transition super smooth
 }
 ```
 
-For quick reference, head to the demo link for this style [here](http://callmenick.com/development/icons-css3-transitions/index2.html).
+For quick reference, head to the demo link for this style [here](http://callmenick.com/_development/icons-css3-transitions/index2.html).
 
 ## Style 3 – Icon Slide In Left
 
@@ -320,7 +320,7 @@ For this style, a normal monochromatic icon will be visible by default. When a u
 }
 ```
 
-For quick reference, head to the demo link for this style [here](http://callmenick.com/development/icons-css3-transitions/index3.html).
+For quick reference, head to the demo link for this style [here](http://callmenick.com/_development/icons-css3-transitions/index3.html).
 
 ## Style 4 – Solid Background To Thin Border Animation
 
@@ -420,7 +420,7 @@ For this demo, icons will have a solid background colour by default. On hover, t
 }
 ```
 
-For quick reference, head to the demo link for this style [here](http://callmenick.com/development/icons-css3-transitions/index4.html).
+For quick reference, head to the demo link for this style [here](http://callmenick.com/_development/icons-css3-transitions/index4.html).
 
 ## Style 5 – Rotating Cube Icon
 
@@ -524,7 +524,7 @@ This style makes use of [CSS3 perspectives](http://callmenick.com/post/css-trans
 }
 ```
 
-For quick reference, head to the demo link for this style [here](http://callmenick.com/development/icons-css3-transitions/index5.html).
+For quick reference, head to the demo link for this style [here](http://callmenick.com/_development/icons-css3-transitions/index5.html).
 
 ## Browser Support
 
@@ -535,6 +535,6 @@ These icon styles all rely heavily on pseudo elements, transitions, and transfor
 And that's a wrap! Don't forget, you can view the demo and download the source by clicking the links below, and if you have and questions, comments, or feedback, you can also leave them below.
 
 <p class="text-align--center">
-<a href="http://callmenick.com/development/icons-css3-transitions/icons-css3-transitions-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/development/icons-css3-transitions/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/icons-css3-transitions/icons-css3-transitions-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/icons-css3-transitions/" class="button button--inline-block button--medium">View Demo</a>
 </p>

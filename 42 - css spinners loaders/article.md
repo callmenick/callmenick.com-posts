@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://callmenick.com/tutorial-demos/css-loaders-and-spinners/css-loaders-and-spinners-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/css-loaders-and-spinners/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/css-loaders-and-spinners/css-loaders-and-spinners-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/css-loaders-and-spinners/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 ## Why CSS Spinners & Loaders?
@@ -47,7 +47,7 @@ Now, let’s get into each of our loaders and their individual styles. Remember,
 
 ## CSS Spinner/Loader \#1
 
-IMG
+![Spinner 1](/files/2015-03/spinner_1.png)
 
 In this spinner, we have a large circular disc. Inside that disc, there’s a smaller, differently coloured circular disc. This small disc spins around the centre axis of the large disc, and is offset a little bit from the edge. We will apply a rotational animation to the small circular disc, but have to use the CSS property transform-origin to offset the axis which it rotates from. We’ll have to use some math to calculate the transform origin based on the offset of the small disc to the outside of the large disc, the width of the large disc, and the width of the small disc. Here’s what the CSS looks like:
 
@@ -91,7 +91,7 @@ In this spinner, we have a large circular disc. Inside that disc, there’s a sm
 
 ## CSS Spinner/Loader \#2
 
-IMG
+![Spinner 2](/files/2015-03/spinner_2.png)
 
 This spinner looks like a satellite/spaceship/cyclops of some sort. Cool. We have a stationary small disc, and around it a bigger disc that is somehow cut in half. This is a lot easier than you think, and is achieved with a combination of the border-radius and border properties. A transparent border on the left and right of this disc gives it the effect.. This exterior half disc piece does the spinning, this time with an easing function. Here’s the CSS:
 
@@ -146,7 +146,7 @@ This spinner looks like a satellite/spaceship/cyclops of some sort. Cool. We hav
 
 ## CSS Spinner/Loader \#3
 
-IMG
+![Spinner 3](/files/2015-03/spinner_3.png)
 
 This spinner consists of two discs of the same size, on opposite ends of an imaginary square shape. The discs converge at the centre of the square, then move vertically in opposite directions. They then move back to the centre of the imaginary square, and back to their start positions. This is all achieved with  the CSS3 transform: translate() property, and again some math is needed to calculate the positions in which they should move. Basic math, though. Here’s the CSS:
 
@@ -229,7 +229,7 @@ This spinner consists of two discs of the same size, on opposite ends of an imag
 
 ## CSS Spinner/Loader \#4
 
-IMG
+![Spinner 4](/files/2015-03/spinner_4.png)
 
 This spinner/loader starts of in a similar way to the previous one, consisting of two discs of the same size, on opposite ends of an imaginary square shape. This time though, they pulse. When one is small, the other is big, and vice versa. This time, we’ll use the transform: scale(); CSS3 property. Here’s what the CSS looks like:
 
@@ -307,6 +307,6 @@ This tutorial and these spinners are heavily based on CSS3 transitions, transfor
 I highly recommend getting into this modern way of thinking, and breaking the shackles of age-old animated GIF’s. It might seem like a lot of CSS for one tiny little loader, but the truth is, every detail counts these days. When you compress the amount of CSS required for a loader, it’s going to be smaller than the size of a GIF. Include it in your already existent stylesheet and you’re on the ball. It’s scalable, expandable, colourable, modifiable, and just plain ol’ cool looking. I hope this tutorial gave you some insight into the world of CSS animations, transforms, and creating infinite keyframe loops. Try creating your own, feel free to download the source code by clicking the links below, and leave some feedback below. Thanks for reading, and I hope you learned something!
 
 <p class="text-align--center">
-<a href="http://callmenick.com/tutorial-demos/css-loaders-and-spinners/css-loaders-and-spinners-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/css-loaders-and-spinners/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/css-loaders-and-spinners/css-loaders-and-spinners-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/css-loaders-and-spinners/" class="button button--inline-block button--medium">View Demo</a>
 </p>

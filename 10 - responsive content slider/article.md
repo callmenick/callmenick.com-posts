@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://callmenick.com/lab-demos/9-responsive-content-slider/responsive-content-slider-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/lab-demos/9-responsive-content-slider/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/responsive-content-slider/responsive-content-slider-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/responsive-content-slider/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 In this lab, I’m going to make a responsive content slider using HTML, CSS, and Javascript (jQuery). It’ll be a jQuery plugin, and will be able to work on any div that takes on a certain markup. A content slider is a great way of displaying linear information in a neat, concise manner. Enjoy!
@@ -251,6 +251,6 @@ Here’s the order in which our function is performing -
 And there you have it. A neat jQuery function that allows  you to create as many responsive content sliders as you want, as long as they have unique id’s and follow a certain markup.
 
 <p class="text-align--center">
-<a href="http://callmenick.com/lab-demos/9-responsive-content-slider/responsive-content-slider-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/lab-demos/9-responsive-content-slider/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/responsive-content-slider/responsive-content-slider-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/responsive-content-slider/" class="button button--inline-block button--medium">View Demo</a>
 </p>

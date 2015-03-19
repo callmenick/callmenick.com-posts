@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://callmenick.com/lab-demos/10-simple-responsive-navigation/simple-responsive-navigation.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/lab-demos/10-simple-responsive-navigation/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/simple-responsive-navigation/simple-responsive-navigation.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/simple-responsive-navigation/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 In this lab, we build a simple responsive navigation menu using HTML, CSS, and a bit of jQuery. This navigation menu is one level deep, and at a certain screen width, it will turn into a neat “menu” button. When we click this button, the navigation will be toggled.
@@ -167,6 +167,6 @@ Then, we look for a click event on the navigation trigger. When it is clicked, w
 And there you have it! A simple, one-level, responsive navigation menu, that functions nicely and fits neatly across all device screen sizes. I hope you enjoyed this tutorial! Feel free to download the source or view the demo by clicking the links below, and leave any questions, feedback, or comments below too.
 
 <p class="text-align--center">
-<a href="http://callmenick.com/lab-demos/10-simple-responsive-navigation/simple-responsive-navigation.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/lab-demos/10-simple-responsive-navigation/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/simple-responsive-navigation/simple-responsive-navigation.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/simple-responsive-navigation/" class="button button--inline-block button--medium">View Demo</a>
 </p>

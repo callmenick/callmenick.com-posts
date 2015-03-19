@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://callmenick.com/tutorial-demos/simple-alert/simple-alert-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/simple-alert" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/simple-alert/simple-alert-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/simple-alert" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 ## Introduction
@@ -501,6 +501,6 @@ Simple and easy.
 And that’s a wrap! In this tutorial, we dove deep into the creation of a JavaScript component, object extending, instantiating, and executing. The results may be simple, but it is a great insight into the wonderful world of JavaScript OOP, and a great starting point to building your own components. Don’t forget, you can view the demo and download the source by clicking the links below, and if you have and questions, comments, or feedback, you can also leave them below. Also, you can [check out this project on GitHub](https://github.com/callmenick/Simple-Alert) and fiddle as you see fit.
 
 <p class="text-align--center">
-<a href="http://callmenick.com/tutorial-demos/simple-alert/simple-alert-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/simple-alert" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/simple-alert/simple-alert-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/simple-alert" class="button button--inline-block button--medium">View Demo</a>
 </p>

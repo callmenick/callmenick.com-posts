@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://www.callmenick.com/tutorial-demos/css-folding-corner/css-folding-corner-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://www.callmenick.com/tutorial-demos/css-folding-corner/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/css-folding-corner/css-folding-corner-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/css-folding-corner/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 ## Introduction
@@ -123,6 +123,6 @@ In our CSS, we want to hide the shadow if it’s outside the bounds of the folde
 And that’s a wrap. Simple but effective CSS techniques to add a little variety to our content areas. This can be applied to buttons, links, content areas, inputs, CSS icons, etc, to add a little extra style to your appearance without the use of imagery. The beauty lies in the fact that it’s very easily modifiable. I hope you enjoyed this tutorial, and if you have any questions, comments, or feedback, leave it below. Thanks for stopping by, and don’t forget you can view the demo or download the source by clicking the links below.
 
 <p class="text-align--center">
-<a href="http://www.callmenick.com/tutorial-demos/css-folding-corner/css-folding-corner-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://www.callmenick.com/tutorial-demos/css-folding-corner/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/css-folding-corner/css-folding-corner-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/css-folding-corner/" class="button button--inline-block button--medium">View Demo</a>
 </p>

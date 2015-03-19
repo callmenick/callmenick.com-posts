@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://callmenick.com/lab-demos/7-single-page-smooth-scroll/single-page-smooth-scroll-soure.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/lab-demos/7-single-page-smooth-scroll" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/single-page-smooth-scroll/single-page-smooth-scroll-soure.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/single-page-smooth-scroll" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 In this lab, I’m going to demonstrate how to create a fixed navigation, single page site with smooth scrolling, and highlighting the navigation link depending on which section is currently being viewed. This technique is great for single page sites that want to pack in lots of goodies on one page, but use a navigation with cool scrolling to section it off. Let’s get started.
@@ -176,6 +176,6 @@ $(document).ready(function(){
 Here, we see the versatility of the `scroll()` function from JQuery. The possibilities are endless by manipulating it, and this is a great example of using it. Don’t forget to check out the demo or download the source by clicking the links below, and feel free to leave a comment if you have any feedback or questions.
 
 <p class="text-align--center">
-<a href="http://callmenick.com/lab-demos/7-single-page-smooth-scroll/single-page-smooth-scroll-soure.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/lab-demos/7-single-page-smooth-scroll" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/single-page-smooth-scroll/single-page-smooth-scroll-soure.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/single-page-smooth-scroll" class="button button--inline-block button--medium">View Demo</a>
 </p>

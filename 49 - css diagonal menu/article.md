@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://www.callmenick.com/tutorial-demos/css-diagonal-menu/css-diagonal-menu-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://www.callmenick.com/tutorial-demos/css-diagonal-menu/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/css-diagonal-menu/css-diagonal-menu-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/css-diagonal-menu/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 ## The Age-Old Horizontal Navigation Menu
@@ -85,6 +85,6 @@ Support for this of course depends on CSS3 transition/transform browser support,
 And that’s a wrap! With some simple CSS3 techniques, we were able to add a little extra punch to our horizontal navigation menu. I hope you enjoyed this tutorial, and don’t forget you can download the source and view the demo by clicking the links below! If you have any questions, comments, or feedback, feel free to leave them below. Thanks for stopping by.
 
 <p class="text-align--center">
-<a href="http://www.callmenick.com/tutorial-demos/css-diagonal-menu/css-diagonal-menu-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://www.callmenick.com/tutorial-demos/css-diagonal-menu/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/css-diagonal-menu/css-diagonal-menu-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/css-diagonal-menu/" class="button button--inline-block button--medium">View Demo</a>
 </p>

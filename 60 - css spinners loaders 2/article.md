@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://callmenick.com/tutorial-demos/css-loaders-and-spinners-2/css-loaders-and-spinners-2-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/css-loaders-and-spinners-2" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/css-loaders-and-spinners-2/css-loaders-and-spinners-2-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/css-loaders-and-spinners-2" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 ## Introduction
@@ -59,7 +59,7 @@ The width and height of the spinner can be changed here easily, and no subsequen
 
 ## Spinner 1 - Radar
 
-img
+![Radar Spinner](/files/2015-03/spinner_multidisc.png)
 
 This spinner takes on a radar-type look, except each of the quarter-circles are spinning at different speeds, giving a really cool effect of trails chasing each other. Here's the CSS:
 
@@ -111,7 +111,7 @@ This spinner takes on a radar-type look, except each of the quarter-circles are 
 
 ## Spinner 2 - Multi Square
 
-img
+![Radar Spinner](/files/2015-03/spinner_multisquare.png)
 
 I called this spinner the "multi square" spinner. It entails two squares moving clockwise around each other. They don't move on a circular path though. Instead, they move in either horizontal or vertical segments, depending on the position. Each square starts in a separate position and requires its own animation sequence, so there are two sets of keyframe syntax. Here's the CSS:
 
@@ -198,7 +198,7 @@ I called this spinner the "multi square" spinner. It entails two squares moving 
 
 ## Spinner 3 - Multi Ball
 
-img
+![Radar Spinner](/files/2015-03/spinner_multidisc.png)
 
 The multi ball spinner consists of two "balls". The balls are really just squares with a 100% border radius, making them look circular. The two balls exists because of the two pseudo classes available for us, and they sit on opposite ends of a bigger circular path (the actual `div`). The entire element spins in a start-stop motion, giving the perception that the two balls are spinning around each other. Here's the CSS:
 
@@ -254,6 +254,8 @@ The multi ball spinner consists of two "balls". The balls are really just square
 ```
 
 ## Spinner 4 - Square-Diamond
+
+![Radar Spinner](/files/2015-03/spinner_squarediamond.png)
 
 The final spinner in this roundup is called the square-diamond spinner. This spinner consists of a smaller diamond inside a bigger square. The diamond spins and expands while the square spins and shrinks, until the square sits inside the diamond. It then pauses for a brief moment, and spins back into starting position. Each element starts and ends up in different positions, so there are two sets of keyframe syntax. Here's the CSS:
 
@@ -337,6 +339,6 @@ For the sake of brevity, I didn't include any vendor prefixes in the CSS above. 
 And that’s a wrap! Once again, we've seen some progressive techniques in action and created modern, scalable, beautiful, and reusable elements out of pure CSS. Don’t forget, you can view the demo and download the source by clicking the links below, and if you have and questions, comments, or feedback, you can also leave them below. Also, you can [check out this project on GitHub](https://github.com/callmenick/css-loaders-spinners-2). Thanks for reading!
 
 <p class="text-align--center">
-<a href="http://callmenick.com/tutorial-demos/css-loaders-and-spinners-2/css-loaders-and-spinners-2-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/css-loaders-and-spinners-2" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/css-loaders-and-spinners-2/css-loaders-and-spinners-2-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/css-loaders-and-spinners-2" class="button button--inline-block button--medium">View Demo</a>
 </p>

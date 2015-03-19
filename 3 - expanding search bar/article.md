@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://callmenick.com/lab-demos/3-expanding-search-bar/expanding-search-bar-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/lab-demos/3-expanding-search-bar/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/expanding-search-bar/expanding-search-bar-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/expanding-search-bar/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 A normal search bar is boring nowadays. Our search bar will neatly fit into a navigation menu with a neat icon label. When the icon label is clicked, the search bar will transition into view using CSS transitions. Our expanding search bar with CSS transitions looks like this unexpanded:
@@ -182,6 +182,6 @@ Another piece of neat functionality is listening for clicks on the entire docume
 Feel free to view the demo or download the source by clicking the links below. Also, please leave any comments, suggestions, and feedback! Thanks for reading.
 
 <p class="text-align--center">
-<a href="http://callmenick.com/lab-demos/3-expanding-search-bar/expanding-search-bar-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/lab-demos/3-expanding-search-bar/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/expanding-search-bar/expanding-search-bar-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/expanding-search-bar/" class="button button--inline-block button--medium">View Demo</a>
 </p>

@@ -1,3 +1,8 @@
+<p class="text-align--center">
+<a href="http://callmenick.com/_development/revealing-content-overlays/revealing-content-overlays-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/revealing-content-overlays/" class="button button--inline-block button--medium">View Demo</a>
+</p>
+
 ## Introduction
 
 I’ll introduce this tutorial by presenting a very suitable use case. Imagine your company offered a bunch of different services, and on your website’s services section, they were listed. Each service had its own description, but you didn’t want to occupy a whole lot of page real estate. You present a bunch of attractive links or buttons instead, prompting and allowing users to click on the links to view more. Each service might not warrant a whole new page, so instead, we reveal content overlays with CSS3 transitions. They animate into view above the page, and can be closed off easily without ever having to traverse different pages. Pretty neat, huh? Let’s dig in a little!
@@ -230,3 +235,8 @@ This is all useless if JavaScript doesn’t handle the situation accordingly. We
 And that’s a wrap! We’ve tackled a really nice solution to a common situation. We’ve prevented an overload of information all at once, and given users an option to click on some attractive links to gather more information. Revealing content overlays are a great way to include a lot of information on one page without too much clutter. Some awesome CSS3 transitions give users a smooth and modern experience too. Feel free to try different combinations of transitions too!
 
 Thanks for reading, and I hope you enjoyed this tutorial. Feel free to leave any comments, feedback, or questions below, and don’t forget you can download the source and view the demo by clicking the links below. Peace out!
+
+<p class="text-align--center">
+<a href="http://callmenick.com/_development/revealing-content-overlays/revealing-content-overlays-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/revealing-content-overlays/" class="button button--inline-block button--medium">View Demo</a>
+</p>

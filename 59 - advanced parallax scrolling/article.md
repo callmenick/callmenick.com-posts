@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://callmenick.com/tutorial-demos/advanced-parallax-effect/advanced-parallax-effect-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/advanced-parallax-effect" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/advanced-parallax-effect/advanced-parallax-effect-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/advanced-parallax-effect" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 ## Introduction
@@ -178,6 +178,6 @@ Voila! Simple, effective, and easy to play around with.
 In this tutorial, we looked at a from-scratch implementation of an advanced parallax scrolling technique. With some simple CSS manipulation via JavaScript, we've given the user a feeling of variable speed scrolling. And that’s a wrap! Don’t forget, you can view the demo and download the source by clicking the links below, and if you have and questions, comments, or feedback, you can also leave them below.
 
 <p class="text-align--center">
-<a href="http://callmenick.com/tutorial-demos/advanced-parallax-effect/advanced-parallax-effect-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/advanced-parallax-effect" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/advanced-parallax-effect/advanced-parallax-effect-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/advanced-parallax-effect" class="button button--inline-block button--medium">View Demo</a>
 </p>

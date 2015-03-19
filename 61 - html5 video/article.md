@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://callmenick.com/tutorial-demos/html5-video/html5-video-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/html5-video" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/html5-video/html5-video-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/html5-video" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 
@@ -411,6 +411,6 @@ As a final round up, here's some advice I have for you:
 And that’s a wrap! It all seems like a lot to take in, but HTML5 video is pretty interesting and cool. We've looked at a few different things today, from default settings to custom controls to CSS aesthetic implementations. There's nothing stopping you from implementing HTML5 video in your next project! Don’t forget, you can view the demo and download the source by clicking the links below, and if you have and questions, comments, or feedback, you can also leave them below.
 
 <p class="text-align--center">
-<a href="http://callmenick.com/tutorial-demos/html5-video/html5-video-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/html5-video" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/html5-video/html5-video-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/html5-video" class="button button--inline-block button--medium">View Demo</a>
 </p>

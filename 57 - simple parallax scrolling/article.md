@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://callmenick.com/tutorial-demos/simple-parallax-effect/simple-parallax-effect-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/simple-parallax-effect/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/simple-parallax-effect/simple-parallax-effect-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/simple-parallax-effect/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 ## A  Brief Introduction
@@ -149,6 +149,6 @@ Browser support in general is really great. IE8 and down won't support the `back
 Here, we've implemented something that is simple, effective, and a bit different from the ordinary everything-scrolling-at-once kind of look. We utilised some nice but lesser-known CSS techniques to achieve our desired effect. And that's a wrap! Don't forget, you can view the demo and download the source by clicking the links below, and if you have and questions, comments, or feedback, you can also leave them below.
 
 <p class="text-align--center">
-<a href="http://callmenick.com/tutorial-demos/simple-parallax-effect/simple-parallax-effect-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/simple-parallax-effect/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/simple-parallax-effect/simple-parallax-effect-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/simple-parallax-effect/" class="button button--inline-block button--medium">View Demo</a>
 </p>

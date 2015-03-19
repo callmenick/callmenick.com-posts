@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://callmenick.com/lab-demos/2-facebook-feed/facebook-feed-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/lab-demos/2-facebook-feed/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/facebook-feed/facebook-feed-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/facebook-feed/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 **Disclaimer: This tutorial was published on March 14th 2013, using version 3.0.0 of the SDK (available in the source download). Since then, SDK’s have changed a bit, and some set ups. For the most part, it should work. If you’re getting any errors, please read through the comments below and leave yours. I’ll try to help as much as possible.**
@@ -199,6 +199,6 @@ echo "</div>";
 With some simple css styling, you can get it to look really nice and pretty! Thanks for reading, and feel free to download the source. If you have any questions or suggestions, leave a comment below and I’ll get back to you as soon as possible.
 
 <p class="text-align--center">
-<a href="http://callmenick.com/lab-demos/2-facebook-feed/facebook-feed-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/lab-demos/2-facebook-feed/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/facebook-feed/facebook-feed-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/facebook-feed/" class="button button--inline-block button--medium">View Demo</a>
 </p>

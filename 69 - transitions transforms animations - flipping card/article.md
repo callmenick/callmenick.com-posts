@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://callmenick.com/development/transitions-transforms-animations/1-flipping-card/1-flipping-card-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/development/transitions-transforms-animations/1-flipping-card/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/transitions-transforms-animations/1-flipping-card/1-flipping-card-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/transitions-transforms-animations/1-flipping-card/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 This is part 1 of a series of tutorials about practical use cases of CSS transitions, transforms, and animations. In this tutorial, we'll look at a "flipping card" scenario, and implementation variations.
@@ -230,6 +230,6 @@ This technique makes heave use of CSS transitions and transforms, so take that i
 And that’s a wrap! We covered some important features here, and took a little plunge into the world of CSS3 transitions and transforms, and looked at a real-world use case for them. Don’t forget, you can view the demo and download the source by clicking the links below, and if you have and questions, comments, or feedback, you can also leave them below.
 
 <p class="text-align--center">
-<a href="http://callmenick.com/development/transitions-transforms-animations/1-flipping-card/1-flipping-card-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/development/transitions-transforms-animations/1-flipping-card/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/transitions-transforms-animations/1-flipping-card/1-flipping-card-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/transitions-transforms-animations/1-flipping-card/" class="button button--inline-block button--medium">View Demo</a>
 </p>

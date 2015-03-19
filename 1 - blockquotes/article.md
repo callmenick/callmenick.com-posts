@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://callmenick.com/lab-demos/1-blockquote-styling/1-blockquote-styling.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/lab-demos/1-blockquote-styling/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/blockquote-styling/1-blockquote-styling.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/blockquote-styling/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 ## Getting Started
@@ -66,6 +66,6 @@ Our `p` tags are given some basic style for aesthetic purposes. The `blockquote`
 And there you have it! A simple wireframe for creating stand-out blockquotes. I added a few media queries in mine so that it looks good at smaller screen widths (as you can see in the demo), so adjust yours to suit. You can download the source code and leave any comments you like below. Thanks for checking it out!
 
 <p class="text-align--center">
-<a href="http://callmenick.com/lab-demos/1-blockquote-styling/1-blockquote-styling.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/lab-demos/1-blockquote-styling/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/blockquote-styling/1-blockquote-styling.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/blockquote-styling/" class="button button--inline-block button--medium">View Demo</a>
 </p>

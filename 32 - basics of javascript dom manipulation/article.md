@@ -77,7 +77,7 @@ Various ways to access DOM elements.
 Returns a reference to the element by its ID.
 
 ```javascript
-element = document.getElementById(id);
+var element = document.getElementById(id);
 ```
 
 ### 7b) Accessing by Class Names ([MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/document.getElementsByClassName))
@@ -85,8 +85,8 @@ element = document.getElementById(id);
 Returns an array of all child elements which have all of the given class names. This is not supported from IE8 and below, so be careful when using it.
 
 ```javascript
-elements = document.getElementsByClassName(names); // or:
-elements = rootElement.getElementsByClassName(names);
+var elements = document.getElementsByClassName(names); // or:
+var elements = rootElement.getElementsByClassName(names);
 ```
 
 * `elements` is a `HTMLCollection` of found elements.
@@ -109,7 +109,7 @@ var elements = document.getElementsByTagName(name);
 Returns the first element within the document (using depth-first pre-order traversal of the document’s nodes) that matches the specified group of selectors. Supported by IE8 and up.
 
 ```javascript
-element = document.querySelector(selectors);
+var element = document.querySelector(selectors);
 ```
 
 * `element` is an element object.
@@ -126,7 +126,7 @@ var el = document.querySelector(".myclass");
 Returns a list of the elements within the document (using depth-first pre-order traversal of the document’s nodes) that match the specified group of selectors. The object returned is a NodeList. Supported by IE8 and up.
 
 ```javascript
-elementList = document.querySelectorAll(selectors);
+var elementList = document.querySelectorAll(selectors);
 ```
 
 * `elementList` is a non-live NodeList of element objects.
@@ -155,7 +155,7 @@ var ndList = elementNodeReference.childNodes;
 Returns the node immediately following the specified one in its parent’s childNodes list, or null if the specified node is the last node in that list.
 
 ```javascript
-nextNode = node.nextSibling
+var nextNode = node.nextSibling
 ```
 
 ### 8c) Child Elements of a Given Object ([MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode.children))

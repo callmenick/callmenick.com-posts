@@ -1,6 +1,6 @@
 <p class="text-align--center">
 <a href="https://github.com/callmenick/Animating-Hamburger-Icons" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/development/css-hamburger-menu-icons/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/css-hamburger-menu-icons/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 ## Intro
@@ -101,7 +101,7 @@ Now, we have our hamburger icon! Let’s jump into each of our examples now.
 
 ## Style 1 – Rotating Icon
 
-style1
+![Style 1](/files/2015-02/style1.png)
 
 This is the easiest of the icons, as all we’re doing is rotating the icon when it is active. Here’s the CSS:
 
@@ -135,7 +135,7 @@ This is the easiest of the icons, as all we’re doing is rotating the icon when
 
 ## Style 2 – Animate To “X”
 
-style2
+![Style 2](/files/2015-02/style2.png)
 
 This version of the hamburger icon animates it to an “x” by moving the top and bottom bars to the vertical-center of the icon, then rotating them. I used transition delays to achieve the overall effect, as I wanted the transform to the “x” to occur after the top and bottom bars moved to the middle. Here’s the CSS:
 
@@ -205,7 +205,7 @@ This version of the hamburger icon animates it to an “x” by moving the top a
 
 ## Style 3 – Animate To Left-Pointing Arrow
 
-style3
+![Style 3](/files/2015-02/style3.png)
 
 In this version of the icon, the whole thing rotates 180 degrees, and the top and bottom bars animate to form a left-pointing arrow. Here’s the CSS:
 
@@ -275,7 +275,7 @@ In this version of the icon, the whole thing rotates 180 degrees, and the top an
 
 ## Style 4 – Animate To Right-Pointing Arrow
 
-style4
+![Style 4](/files/2015-02/style4.png)
 
 This is very similar to the above version, except the arrow ends up pointing the other way (i.e. to the right). Here’s the CSS:
 
@@ -381,5 +381,5 @@ And that’s a wrap! Don’t forget, you can view the demo and download the sour
 
 <p class="text-align--center">
 <a href="https://github.com/callmenick/Animating-Hamburger-Icons" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/development/css-hamburger-menu-icons/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/css-hamburger-menu-icons/" class="button button--inline-block button--medium">View Demo</a>
 </p>

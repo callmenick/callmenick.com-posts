@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://callmenick.com/lab-demos/8-slide-down-menu/slide-down-menu-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/lab-demos/8-slide-down-menu/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/slide-down-menu/slide-down-menu-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/slide-down-menu/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 In this lab, we take on the classic drop down menu, but with a little animated slide using jQuery. The slide down and up animation adds a nice touch to the menu for the user, and the menu is also scalable to add multiple levels of menu items. Enjoy!
@@ -162,6 +162,6 @@ $(document).ready(function() {
 And voila! There you have it, a neat, functional, and user friendly slide down menu using CSS and jQuery. Don’t forget, you can download the source and view the demo by clicking the buttons below, and if you have any questions of comments, please feel free to leave them below. Thanks, and I hope you enjoyed! Coming soon – how to make a menu turn into a mobile friendly button that slides down on click.
 
 <p class="text-align--center">
-<a href="http://callmenick.com/lab-demos/8-slide-down-menu/slide-down-menu-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/lab-demos/8-slide-down-menu/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/slide-down-menu/slide-down-menu-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/slide-down-menu/" class="button button--inline-block button--medium">View Demo</a>
 </p>

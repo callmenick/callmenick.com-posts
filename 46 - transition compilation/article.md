@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://www.callmenick.com/tutorial-demos/css3-transitions-compilation/css3-transitions-compilation-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://www.callmenick.com/tutorial-demos/css3-transitions-compilation/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/css3-transitions-compilation/css3-transitions-compilation-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/css3-transitions-compilation/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 ## Introduction To CSS3
@@ -295,6 +295,6 @@ We’re gonna get a little creative with this effect to simulate an underline be
 And that’s a wrap, my starter collection of simple transitions, transforms, and animations ready to go into any project. These should give you some insight too, and allow you to get creative and make your own. I hope you learned something and enjoyed this tutorial. Feel free to leave any comments, questions, or feedback below, and don’t forget to check out the demo or download the source if you need it.
 
 <p class="text-align--center">
-<a href="http://www.callmenick.com/tutorial-demos/css3-transitions-compilation/css3-transitions-compilation-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://www.callmenick.com/tutorial-demos/css3-transitions-compilation/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/css3-transitions-compilation/css3-transitions-compilation-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/css3-transitions-compilation/" class="button button--inline-block button--medium">View Demo</a>
 </p>

@@ -1,6 +1,6 @@
 <p class="text-align--center">
 <a href="https://github.com/callmenick/Material-Menu" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/projects/material-off-canvas-menu/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/material-menu/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 ## Material Design Off Canvas Menu
@@ -63,5 +63,5 @@ This project is on GitHub, so feel free to contribute, test, write an issue, for
 
 <p class="text-align--center">
 <a href="https://github.com/callmenick/Material-Menu" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/projects/material-off-canvas-menu/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/material-menu/" class="button button--inline-block button--medium">View Demo</a>
 </p>

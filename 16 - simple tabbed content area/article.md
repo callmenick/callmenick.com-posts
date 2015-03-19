@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://callmenick.com/lab-demos/14-tabbed-content/14-tabbed-content.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/lab-demos/14-tabbed-content/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/tabbed-content/14-tabbed-content.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/tabbed-content/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 Our tabbed contend area is based on a simple user interaction. We have some tabs that act as a navigation, and some content areas (`sections`) that are controlled by these tabs. When one tab is selected, it is highlighted and the corresponding `section` is shown, while the rest of the sections are hidden.
@@ -102,6 +102,6 @@ Our simple jQuery function above lets us show and hide the correct content area 
 And there you have it! A simple tabbed content area, using CSS and jQuery. It’s highly customizable, and you can easily drop it into any of your projects. Thanks for checking it out, and feel free to download the source code or leave any comments/questions below.
 
 <p class="text-align--center">
-<a href="http://callmenick.com/lab-demos/14-tabbed-content/14-tabbed-content.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/lab-demos/14-tabbed-content/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/tabbed-content/14-tabbed-content.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/tabbed-content/" class="button button--inline-block button--medium">View Demo</a>
 </p>

@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://www.callmenick.com/tutorial-demos/image-overlay-hover-effects/image-overlay-hover-effects-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://www.callmenick.com/tutorial-demos/image-overlay-hover-effects" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://www.callmenick.com/_development/image-overlay-hover-effects/image-overlay-hover-effects-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://www.callmenick.com/_development/image-overlay-hover-effects" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 Image overlay hover effects with CSS3 transitions are a great way to add some nice interactivity on your site. In the old days, a little pointer cursor would do the trick for indicating to the user that an image was clickable to view more information. Nowadays, we want some smooth transitions and some UI icons to prompt the user. In our case, we’re going to have a series of images. When the user hovers over an image, a semi-transparent black background transitions in over the image, along with a “+” icon. This will indicate to the user that they can click the image for things like more info, a larger view of the image, etc. Let’s get started!
@@ -206,6 +206,6 @@ Special thanks to [Marco Goran Romano](http://dribbble.com/goranfactory) for the
 
 
 <p class="text-align--center">
-<a href="http://www.callmenick.com/tutorial-demos/image-overlay-hover-effects/image-overlay-hover-effects-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://www.callmenick.com/tutorial-demos/image-overlay-hover-effects" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://www.callmenick.com/_development/image-overlay-hover-effects/image-overlay-hover-effects-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://www.callmenick.com/_development/image-overlay-hover-effects" class="button button--inline-block button--medium">View Demo</a>
 </p>

@@ -1,6 +1,6 @@
 <p class="text-align--center">
 <a href="https://github.com/callmenick/Memory" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/memory/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/memory/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 ## Memory Game
@@ -154,5 +154,5 @@ Licensed under the MIT license - http://www.opensource.org/licenses/mit-license.
 
 <p class="text-align--center">
 <a href="https://github.com/callmenick/Memory" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/memory/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/memory/" class="button button--inline-block button--medium">View Demo</a>
 </p>

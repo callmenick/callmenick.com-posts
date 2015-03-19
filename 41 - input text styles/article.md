@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://www.callmenick.com/tutorial-demos/input-text-styles/input-text-styles-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://www.callmenick.com/tutorial-demos/input-text-styles/input-text-styles-source.zip" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/input-text-styles/input-text-styles-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/input-text-styles/input-text-styles-source.zip" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 ## Adding Beauty To Your Forms
@@ -160,6 +160,6 @@ Beautiful and effective!
 As we’ve seen many times now, CSS and CSS3 open up a lot of options for us. Once we get creative and start thinking outside the box a bit, the possibilities really open up. I’ve only touched the surface here, so it’s up to you to use this knowledge and get creative. Thanks for reading, and feel free to view the demo, download the source, or leave feedback below.
 
 <p class="text-align--center">
-<a href="http://www.callmenick.com/tutorial-demos/input-text-styles/input-text-styles-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://www.callmenick.com/tutorial-demos/input-text-styles/input-text-styles-source.zip" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/input-text-styles/input-text-styles-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/input-text-styles/input-text-styles-source.zip" class="button button--inline-block button--medium">View Demo</a>
 </p>

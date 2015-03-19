@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://callmenick.com/development/transitions-transforms-animations/2-perspective/2-perspective-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/development/transitions-transforms-animations/2-perspective/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/transitions-transforms-animations/2-perspective/2-perspective-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/transitions-transforms-animations/2-perspective/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 This is part 2 of a series of tutorials about practical use cases of CSS transitions, transforms, and animations. In this tutorial, we’re going to take an in-depth look into CSS3 perspective, and some use-cases where it can give users more natural and cool experiences.
@@ -99,7 +99,7 @@ Now, we can see three different results:
 2. The second appears to have moved into the screen a bit, because we set the `perspective` to `200px`. Remember from the definition above that the perspective property determines the distance between the z=0 plane and the user.
 3. The third appears even smaller still, and has moved to the top-left corner of our perspective container. This is because of the `perspective-origin` property set on the parent container.
 
-In the [demo](http://callmenick.com/development/transitions-transforms-animations/2-perspective/index.html), you can see all three in action.
+In the [demo](http://callmenick.com/_development/transitions-transforms-animations/2-perspective/index.html), you can see all three in action.
 
 ## Demo 2 – Rotating Shapes With Perspective
 
@@ -161,7 +161,7 @@ Hovering over the three different implementations results in three different out
 2. When we set perspective to 400px, we can see that the object now looks like it is spinning out and back into the screen. This is because of perspective.
 3. With the perspective set to 400px and the perspective origin moved to [0 0], a similar effect to number 2 is achieved, but this time viewed from the perspective origin.
 
-Be sure to [check out the demo](http://callmenick.com/development/transitions-transforms-animations/2-perspective/index2.html) to see them in action. Now, we’re starting to see the power of CSS3 perspectives! If we go ahead and apply this to the [flipping card demo](http://callmenick.com/post/css-transitions-transforms-animations-flipping-card/), we’ll achieve an even more real-world scenario. Let’s keep on moving.
+Be sure to [check out the demo](http://callmenick.com/_development/transitions-transforms-animations/2-perspective/index2.html) to see them in action. Now, we’re starting to see the power of CSS3 perspectives! If we go ahead and apply this to the [flipping card demo](http://callmenick.com/post/css-transitions-transforms-animations-flipping-card/), we’ll achieve an even more real-world scenario. Let’s keep on moving.
 
 ## Demo 3 – 3D Cube With Variable Perspective Origins
 
@@ -254,7 +254,7 @@ Now, let’s take a look at the top and bottom faces. The top face needs to move
 }
 ```
 
-And voila, now we have our CSS cube, using transforms and perspective! Make sure to [check out the demo](http://callmenick.com/development/transitions-transforms-animations/2-perspective/index3.html) to see the full thing in action.
+And voila, now we have our CSS cube, using transforms and perspective! Make sure to [check out the demo](http://callmenick.com/_development/transitions-transforms-animations/2-perspective/index3.html) to see the full thing in action.
 
 Let’s add some controls now that will allow us to change perspective and perspective-origins on the fly. I’ll use the range input, and wire up three of them to handle the respective properties. Here’s the markup:
 
@@ -304,7 +304,7 @@ And here’s some JavaScript to give us a playful little demo:
 })();
 ```
 
-And now, we have an interactive demo of a 3D cube, creating using CSS3 transforms and perspectives. [The demo](http://callmenick.com/development/transitions-transforms-animations/2-perspective/index3.html) should truly give you a grasp on how perspective is handled in the browser!
+And now, we have an interactive demo of a 3D cube, creating using CSS3 transforms and perspectives. [The demo](http://callmenick.com/_development/transitions-transforms-animations/2-perspective/index3.html) should truly give you a grasp on how perspective is handled in the browser!
 
 ## Demo 4 – Spinning Cubes
 
@@ -342,7 +342,7 @@ And we can add the classes to our cubes as follows:
 </div>
 ```
 
-[Check out the demo](http://callmenick.com/development/transitions-transforms-animations/2-perspective/index4.html) to see the two spinning cubes in action! Also note the importance of the `transform-style: preserve-3d` property set on the cube. This ensures that the cube faces stay stacked in 3D space, and aren’t flattened out when transformed.
+[Check out the demo](http://callmenick.com/_development/transitions-transforms-animations/2-perspective/index4.html) to see the two spinning cubes in action! Also note the importance of the `transform-style: preserve-3d` property set on the cube. This ensures that the cube faces stay stacked in 3D space, and aren’t flattened out when transformed.
 
 ## Browser Support
 
@@ -353,6 +353,6 @@ Perspective, transitions, and animations are supported in IE10 and up, whereas t
 And that’s a wrap! We’ve just taken an in depth look at CSS3 perspective, and some of the possibilities available when combining perspective with transforms, transitions, and animations. Don’t forget, you can view the demo and download the source by clicking the links below, and if you have and questions, comments, or feedback, you can also leave them below.
 
 <p class="text-align--center">
-<a href="http://callmenick.com/development/transitions-transforms-animations/2-perspective/2-perspective-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/development/transitions-transforms-animations/2-perspective/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/transitions-transforms-animations/2-perspective/2-perspective-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/transitions-transforms-animations/2-perspective/" class="button button--inline-block button--medium">View Demo</a>
 </p>

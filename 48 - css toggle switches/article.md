@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://callmenick.com/tutorial-demos/css-toggle-switch/css-toggle-switch-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/css-toggle-switch/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/css-toggle-switch/css-toggle-switch-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/css-toggle-switch/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 ## The Reasoning
@@ -57,7 +57,7 @@ All of our switches will require a little math to get right, but scaling up and 
 
 ## Example 1 – Round Style CSS Toggle Switch
 
-<img class="alignnone size-full wp-image-636" src="http://www.callmenick.com/wp-content/uploads/2014/05/toggle-switch-1.png" alt="toggle-switch-1" width="900" height="180">
+![Round style toggle switch](/files/2015-03/toggle_switch_1.png)
 
 Our `label`, acting as our container, has a width and height. We set a background colour on it too, which will simulate a border on our toggle switch. Our `:before` element will simulate the inner light-grey area of the switch, and will transition into green. The `:after` element will be the actual round switch that sits on top of everything, and slides from left to right on click. It’ll have a `box-shadow` also to make it stand up above everything else. We’ll change the background colour of the `:before` element and the position of the :after element when the input takes on the pseudo class `:checked`, and everything will transition smoothly. Here’s the CSS:
 
@@ -101,7 +101,7 @@ input.cmn-toggle-round:checked + label:after {
 
 ## Example 2 – Round Style Switch With Flat Finish
 
-<img class="alignnone size-full wp-image-637" src="http://www.callmenick.com/wp-content/uploads/2014/05/toggle-switch-2.png" alt="toggle-switch-2" width="900" height="180">
+![Round style flat toggle switch](/files/2015-03/toggle_switch_2.png)
 
 This example is fairly similar to example 1, the main difference being the aesthetic presentation of it. It fits right in line with the slick flat trends of modern websites, but functions the same as example 1. The CSS will only represent a change in aesthetic, the rest is the same. Here’s the CSS:
 
@@ -149,7 +149,7 @@ input.cmn-toggle-round-flat:checked + label:after {
 
 ## Example 3 – Yes/No Flip Style CSS Toggle Switch
 
-<img class="alignnone size-full wp-image-638" src="http://www.callmenick.com/wp-content/uploads/2014/05/toggle-switch-3.png" alt="toggle-switch-3" width="900" height="180">
+![Yes no toggle switch](/files/2015-03/toggle_switch_3.png)
 
 Now we’re gonna do something a little different. We’re going to create a flip style CSS toggle switch. The default view will be greyed out and say “No” (or anything that signifies unchecked), and the checked view will be green with “Yes” written in it. When the label is clicked, the switch will flip over, spinning 180 degrees (that’s 3.142 radians for you engineers!) on its y-axis, revealing the opposite side. We’re going to populate the content of the unchecked/checked switch by using `data-attributes`. These `data-attributes` were specified in the HTML by `data-on` and `data-off`, each of which will populate the `:after` and `:before` pseudo elements respectively. Take note of the `backface-visibility` on the `:after` element, which initially hides its back side due to its starting point at -180 degrees. Here’s the CSS:
 
@@ -207,6 +207,6 @@ Browser support for all of this is very high. IE8 and down fails to recognize th
 And that’s a wrap folks, some nice CSS toggle switch examples! This technique keeps everything totally semantic, doesn’t add any crazy markup, and is done with pure CSS goodness. Of course, be mindful of browser support, but it’s no big deal to cater to older browsers with conditional styles. Using the examples presented above, there’s no shortage of approaches you can take on. I hope you enjoyed this tutorial and learned something. Feel free to download the source code and view the demo, and leave any comments, questions, or feedback below.
 
 <p class="text-align--center">
-<a href="http://callmenick.com/tutorial-demos/css-toggle-switch/css-toggle-switch-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/css-toggle-switch/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/css-toggle-switch/css-toggle-switch-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/css-toggle-switch/" class="button button--inline-block button--medium">View Demo</a>
 </p>

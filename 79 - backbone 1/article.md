@@ -1,6 +1,6 @@
 <p class="text-align--center">
 <a href="https://github.com/callmenick/Backbone-Users-Directory/tree/part-1" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/development/backbonejs/users-directory/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/backbonejs/users-directory/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 ## Foreword
@@ -266,5 +266,5 @@ And that’s a wrap! Don’t forget, you can view the demo and download the sour
 
 <p class="text-align--center">
 <a href="https://github.com/callmenick/Backbone-Users-Directory/tree/part-1" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/development/backbonejs/users-directory/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/backbonejs/users-directory/" class="button button--inline-block button--medium">View Demo</a>
 </p>

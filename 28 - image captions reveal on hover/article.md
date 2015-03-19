@@ -1,6 +1,6 @@
 <p class="text-align--center">
-<a href="http://callmenick.com/tutorial-demos/image-caption-reveal-on-hover/image-caption-reveal-on-hover-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/image-caption-reveal-on-hover/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/image-caption-reveal-on-hover/image-caption-reveal-on-hover-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/image-caption-reveal-on-hover/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
 This tutorial demonstrates some neat effects for image captions that reveal on hover. Instead of displaying captions regularly underneath or to the side of the image, we’re going to use CSS3 transitions to transition out the image and transition in the caption when we hover over the image.
@@ -297,6 +297,6 @@ The JavaScript first checks if a device is touch enabled. If it is, we query thr
 This is just a scratch on the surface of the possibilities out there. I encourage you to experiment with more transitions, transforms, and all these new cool CSS3 properties, and come up with some of your own.
 
 <p class="text-align--center">
-<a href="http://callmenick.com/tutorial-demos/image-caption-reveal-on-hover/image-caption-reveal-on-hover-source.zip" class="button button--inline-block button--medium">Get Source</a>
-<a href="http://callmenick.com/tutorial-demos/image-caption-reveal-on-hover/" class="button button--inline-block button--medium">View Demo</a>
+<a href="http://callmenick.com/_development/image-caption-reveal-on-hover/image-caption-reveal-on-hover-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="http://callmenick.com/_development/image-caption-reveal-on-hover/" class="button button--inline-block button--medium">View Demo</a>
 </p>
