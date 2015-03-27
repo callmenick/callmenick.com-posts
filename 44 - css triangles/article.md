@@ -42,9 +42,9 @@ body {
 
 We’re going to use a combination of solid and transparent borders to show and hide certain sides of the div area. We’re making use of the fact that CSS borders meet each other at an angle, so transparent borders will give the diagonal effect on the touching solid side. A little math is necessary, but it’s pretty basic. Alright, let’s go.
 
-## Triangle #0
+## Triangle 0
 
-Triangle \#0 points south-east. Here’s the CSS:
+Triangle 0 points south-east. Here’s the CSS:
 
 ```css
 .triangle-0 {
@@ -55,10 +55,11 @@ Triangle \#0 points south-east. Here’s the CSS:
   border-left: solid 50px transparent;
   border-top: solid 50px transparent;
 }
+```
 
-## Triangle #1
+## Triangle 1
 
-Triangle number one is like #0, but points south-west instead. Here’s the CSS:
+Triangle number one is like 0, but points south-west instead. Here’s the CSS:
 
 ```css
 .triangle-1 {
@@ -71,9 +72,9 @@ Triangle number one is like #0, but points south-west instead. Here’s the CSS:
 }
 ```
 
-## Triangle #2
+## Triangle 2
 
-Triangle #2 points directly west. Here’s the CSS:
+Triangle 2 points directly west. Here’s the CSS:
 
 ```css
 .triangle-2 {
@@ -85,9 +86,9 @@ Triangle #2 points directly west. Here’s the CSS:
 }
 ```
 
-## Triangle #3
+## Triangle 3
 
-Triangle #3 is the exact opposite of #2, pointing directly east. Here’s the CSS:
+Triangle 3 is the exact opposite of 2, pointing directly east. Here’s the CSS:
 
 ```css
 .triangle-3 {
@@ -99,9 +100,9 @@ Triangle #3 is the exact opposite of #2, pointing directly east. Here’s the CS
 }
 ```
 
-## Triangle #4
+## Triangle 4
 
-Triangle #4 points directly north. Here’s the CSS:
+Triangle 4 points directly north. Here’s the CSS:
 
 ```css
 .triangle-4 {
@@ -113,9 +114,9 @@ Triangle #4 points directly north. Here’s the CSS:
 }
 ```
 
-## Triangle #5
+## Triangle 5
 
-Triangle #5 is exactly opposite to #4, and points directly south. Here’s the CSS:
+Triangle 5 is exactly opposite to 4, and points directly south. Here’s the CSS:
 
 ```css
 .triangle-5 {
@@ -132,7 +133,10 @@ Triangle #5 is exactly opposite to #4, and points directly south. Here’s the C
 You can see them all in action by viewing the Pen below.
 
 <p data-height="257" data-theme-id="5513" data-slug-hash="cBkvE" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/callmenick/pen/cBkvE/'>CSS Triangle</a> by Nick Salloum (<a href='http://codepen.io/callmenick'>@callmenick</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+
+<p>
 <script async src="//codepen.io/assets/embed/ei.js"></script>
+</p>
 
 ## Wrap Up
 

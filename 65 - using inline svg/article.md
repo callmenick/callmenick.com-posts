@@ -61,7 +61,9 @@ With the `circle` element, we have 3 specific attributes. They are `cx`, `cy,` a
 
 And our output like this:
 
+<p>
 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50"></circle></svg>
+</p>
 
 ### The Rect Element
 
@@ -75,7 +77,9 @@ Using the `rect` element is just as intuitive as the `circle` element. In it's m
 
 And the output like this:
 
+<p>
 <svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100"><rect x="0" y="0" width="200" height="100"></rect></svg>
+</p>
 
 ### The Polygon Element
 
@@ -89,7 +93,9 @@ We define our `polygon` element by a collection of x-y coordinates listed inside
 
 And our output like this:
 
+<p>
 <svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100"><polygon points="0,50 50,0 150,0 200,50 150,100 50,100"></polygon></svg>
+</p>
 
 ### The Path Element
 
@@ -113,7 +119,9 @@ With that in mind, here's some sample markup for a simple square:
 
 We started at (0 0), moved horizontally to (200 0), moved vertically to (200 200), moved horizontally to (0 200), and closed the path. Our output looks like this:
 
+<p>
 <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><path d="M 0 0 H 200 V 200 H 0 Z"></path></svg>
+</p>
 
 Creating curves is a slightly more complicated procedure. But at our disposal, we have cubic Bezier's, quadratic curves, and arcs. As an example, let's look at the building of a cubic Bezier.
 
@@ -127,7 +135,9 @@ At this point, if you want to learn more about Bezier curves and how they are co
 
 And here's the output:
 
+<p>
 <svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100"><path d="M 0 0 C 50 100, 150 100, 200 0"/></svg>
+</p>
 
 ## Adding Style To Our Elements
 
@@ -163,7 +173,10 @@ Now, let's add some transitions and create some hover effects using CSS. We'll s
 And here's the output:
 
 <style>.circle { -webkit-transition: stroke 0.3s, fill 0.3s; transition: stroke 0.3s, fill 0.3s; } .circle:hover { stroke: #3399cc; fill: #333333;}</style>
+
+<p>
 <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><circle class="circle" cx="100" cy="100" r="90" fill="#3399cc" stroke="#333333" stroke-width="5"></circle></svg>
+</p>
 
 Pretty awesome! Again, I encourage you to take a look at the [attribute reference](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute) and the [element reference](https://developer.mozilla.org/en-US/docs/Web/SVG/Element) for a full list of what's available.
 
