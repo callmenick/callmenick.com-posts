@@ -6,7 +6,7 @@ As CSS continues to evolve, interesting selectors and functions are always on th
 
 In its most basic form, the `calc()` function takes on some values and returns the calculated dimension. According to the W3C:
 
-> The calc() function allows mathematical expressions with addition (+), subtraction (-), multiplication (*), and division (/) to be used as component values. The calc() expression represents the result of the mathematical calculation it contains, using standard operator precedence rules. It can be used wherever <length>, <frequency>, <angle>, <time>, <number>, or <integer> values are allowed.
+> The calc() function allows mathematical expressions with addition (+), subtraction (-), multiplication (*), and division (/) to be used as component values. The `calc()` expression represents the result of the mathematical calculation it contains, using standard operator precedence rules. It can be used wherever `<length>`, `<frequency>`, `<angle>`, `<time>`, `<number>`, or `<integer>` values are allowed.
 
 So in essence, we could do something like this:
 
