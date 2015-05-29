@@ -5,12 +5,13 @@
 
 ## Foreword
 
-This is part 1 of 4 of an ongoing experiment, where I document my steps building with Backbone JS – a client side framework that I’m beginning to love. Each part will build upon the previous, and will ultimately evolve into a little sample users-directory application.
+This is part 1 of an ongoing experiment, where I document my steps building with Backbone JS – a client side framework that I’m beginning to love. Each part will build upon the previous, and will ultimately evolve into a little sample users-directory application.
 
-1. Part 1 – displaying users
-2. Part 2 – sorting users (coming soon)
-3. Part 3 – single view of a user (coming soon)
-4. Part 4 – adding/deleting/editing users (coming soon)
+1. **Set up, retrieving, and outputting users**
+2. Refactoring the app, and implementing sorting ([read here](http://callmenick.com/post/building-with-backbone-users-directory-part-2))
+3. Searching/filtering the users list (coming soon)
+4. Adding, editing, and deleting users (coming soon)
+5. Single view of users (coming soon)
 
 To keep up to date with future progress in this series, [sign up to the newsletter](http://callmenick.com/subscribe).
 
@@ -18,16 +19,7 @@ To keep up to date with future progress in this series, [sign up to the newslett
 
 Backbone is among the top list of front-end structural libraries, allowing us to build web applications easily, without losing focus on mundane tasks like DOM querying, data binding, etc. Traditionally, when we build an application using JavaScript, we find ourselves entering callback-hell. Functionality is piled on top of functionality to allow us to alter content, run an AJAX call, change what’s seen on the screen, etc. Backbone JS is a framework that takes care of a lot of these redundant and hard-to-maintain tasks for us, letting us focus on what’s important – the end result.
 
-With Backbone, data is represented as models. Models can be created, destroyed, validated, or saved to any server or local storage set up. Models are linked to “views”, meaning that the data is automatically bound to the view. Whenever a model changes (via user interaction, for example), the views are automatically updated. Backbone depends on only one other library – Underscore – a library providing us with a host of utility functions. Backbone is a minimal 6.5kb zipped, and underscore is even lower at 5.2kb, giving us a total minuscule overhead of 11.7kb. Not bad at all!
-
-In this series of tutorials, I’m going to go through some iterations of building a simple users directory. I’ll use Backbone and Underscore as required, and also leverage Backbone.Native to handle some of Backbone’s functionality with native JavaScript that otherwise would require jQuery. You can read more about that here. At the end of the series, we’ll want to achieve the following:
-
-1. Part 1 – display a table view of all the users (first name, last name, and email address), read from JSON data
-2. Part 2 – the ability to sort the table by either of the three fields
-3. Part 3 – a single view of each user
-4. Part 4 – the ability to add, edit, and remove users from the table.
-
-Alright, let’s get started!
+With Backbone, data is represented as models. Models can be created, destroyed, validated, or saved to any server or local storage set up. Models are linked to “views”, meaning that the data is automatically bound to the view. Whenever a model changes (via user interaction, for example), the views are automatically updated. Backbone depends on only one other library – Underscore – a library providing us with a host of utility functions. Backbone is a minimal 6.5kb zipped, and underscore is even lower at 5.2kb, giving us a total minuscule overhead of 11.7kb. Not bad at all, now let’s get started!
 
 ## Getting Started 
 
@@ -257,7 +249,7 @@ There are a few important things to note here, so that you’re not overwhelmed.
 
 ## What Next?
 
-So far, we’ve learned about Backbone, what its strong points are, and how to leverage it to build a web application. We’ve looked into retrieving data from a URL, though in a real life situation, you’d probably want to fetch the initial data from the server first. Next up, we look at sorting the data, followed by single views, adding, editing, and removing.
+So far, we’ve learned about Backbone, what its strong points are, and how to leverage it to build a web application. We’ve looked into retrieving data from a URL, though in a real life situation, you’d probably want to fetch the initial data from the server first. Next up, we look at sorting the data.
 
 ## Wrap Up
 
