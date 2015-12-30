@@ -14,19 +14,19 @@ Today though, I’m going to show you how to create a CSS-only version of the fa
 I’ll be creating 4 different demos. The markup for each button is fairly similar, and each button has one common class and one unique class. Each button consists of a parent `button` tag, with an inner `span` tag. The parent tag will play container to the icon, and allow us to add padding and background colors to the icon. The `span` tag will actually play home to the "hamburger bars". Here’s the markup:
 
 ```html
-<button class="cmn-toggle-switch cmn-toggle-switch__rot">
+<button class="c-hamburger c-hamburger--rot">
   <span>toggle menu</span>
 </button>
 
-<button class="cmn-toggle-switch cmn-toggle-switch__htx">
+<button class="c-hamburger c-hamburger--htx">
   <span>toggle menu</span>
 </button>
 
-<button class="cmn-toggle-switch cmn-toggle-switch__htla">
+<button class="c-hamburger c-hamburger--htla">
   <span>toggle menu</span>
 </button>
 
-<button class="cmn-toggle-switch cmn-toggle-switch__htra">
+<button class="c-hamburger c-hamburger--htra">
   <span>toggle menu</span>
 </button>
 ```
@@ -38,28 +38,25 @@ OK, let’s look at the common CSS which will be used across all buttons.
 For starters, I’ve reset all the button styles so that no shadows, borders, and default appearances are visible. I’ve also defined a width and height of the button (which will come in handy for the animation parts), and I’ve hidden the text. Here’s the CSS for the parent `cmn-toggle-switch` class:
 
 ```css
-.cmn-toggle-switch {
+.c-hamburger {
   display: block;
   position: relative;
   overflow: hidden;
   margin: 0;
   padding: 0;
-  width: 108px;
+  width: 96px;
   height: 96px;
   font-size: 0;
   text-indent: -9999px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   box-shadow: none;
   border-radius: none;
   border: none;
   cursor: pointer;
-  -webkit-transition: background 0.3s;
-          transition: background 0.3s;
+  transition: background 0.3s;
 }
 
-.cmn-toggle-switch:focus {
+.c-hamburger:focus {
   outline: none;
 }
 ```
@@ -67,33 +64,33 @@ For starters, I’ve reset all the button styles so that no shadows, borders, an
 Now, the inner `span` tag is actually home to the hamburger bars. We need three bars, so I’ll use the tag itself, and its pseudo elements `::before` and `::after`. The positioning of each bar (and the `span` tag itself) is all mathematically calculated based on the dimensions of the parent `button`. If you’re a Sass user like myself, then this is very easy and you’ll find all the Sass and variables for editing in the source code. If not, you’ll have to think a little harder and do more math if you want to achieve different sizes than the demos below. Here’s the CSS for the inner spans:
 
 ```css
-.cmn-toggle-switch span {
+.c-hamburger span {
   display: block;
   position: absolute;
-  top: 45px;
+  top: 44px;
   left: 18px;
   right: 18px;
-  height: 6px;
+  height: 8px;
   background: white;
 }
 
-.cmn-toggle-switch span::before,
-.cmn-toggle-switch span::after {
+.c-hamburger span::before,
+.c-hamburger span::after {
   position: absolute;
   display: block;
   left: 0;
   width: 100%;
-  height: 6px;
+  height: 8px;
   background-color: #fff;
   content: "";
 }
 
-.cmn-toggle-switch span::before {
-  top: -27px;
+.c-hamburger span::before {
+  top: -20px;
 }
 
-.cmn-toggle-switch span::after {
-  bottom: -27px;
+.c-hamburger span::after {
+  bottom: -20px;
 }
 ```
 
@@ -106,30 +103,21 @@ Now, we have our hamburger icon! Let’s jump into each of our examples now.
 This is the easiest of the icons, as all we’re doing is rotating the icon when it is active. Here’s the CSS:
 
 ```css
-/**
- * Style 1
- *
- * Rotating hamburger icon (rot), that simply rotates 90 degrees when activated.
- * Nothing too fancy, simple transition.
- */
-.cmn-toggle-switch__rot {
+.c-hamburger--rot {
   background-color: #28aadc;
 }
 
-.cmn-toggle-switch__rot span {
-  -webkit-transition: -webkit-transform 0.3s;
-          transition: transform 0.3s;
+.c-hamburger--rot span {
+  transition: transform 0.3s;
 }
 
 /* active state, i.e. menu open */
-.cmn-toggle-switch__rot.active {
+.c-hamburger--rot.is-active {
   background-color: #166888;
 }
 
-.cmn-toggle-switch__rot.active span {
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
+.c-hamburger--rot.is-active span {
+  transform: rotate(90deg);
 }
 ```
 
@@ -140,66 +128,50 @@ This is the easiest of the icons, as all we’re doing is rotating the icon when
 This version of the hamburger icon animates it to an “x” by moving the top and bottom bars to the vertical-center of the icon, then rotating them. I used transition delays to achieve the overall effect, as I wanted the transform to the “x” to occur after the top and bottom bars moved to the middle. Here’s the CSS:
 
 ```css
-/**
- * Style 2
- * 
- * Hamburger to "x" (htx). Takes on a hamburger shape, bars slide
- * down to center and transform into an "x".
- */
-.cmn-toggle-switch__htx {
+.c-hamburger--htx {
   background-color: #ff3264;
 }
 
-.cmn-toggle-switch__htx span {
-  -webkit-transition: background 0 0.3s;
-          transition: background 0 0.3s;
+.c-hamburger--htx span {
+  transition: background 0s 0.3s;
 }
 
-.cmn-toggle-switch__htx span::before,
-.cmn-toggle-switch__htx span::after {
-  -webkit-transition-duration: 0.3s, 0.3s;
-          transition-duration: 0.3s, 0.3s;
-  -webkit-transition-delay: 0.3s, 0;
-          transition-delay: 0.3s, 0;
+.c-hamburger--htx span::before,
+.c-hamburger--htx span::after {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
 }
 
-.cmn-toggle-switch__htx span::before {
-  -webkit-transition-property: top, -webkit-transform;
-          transition-property: top, transform;
+.c-hamburger--htx span::before {
+  transition-property: top, transform;
 }
 
-.cmn-toggle-switch__htx span::after {
-  -webkit-transition-property: bottom, -webkit-transform;
-          transition-property: bottom, transform;
+.c-hamburger--htx span::after {
+  transition-property: bottom, transform;
 }
 
 /* active state, i.e. menu open */
-.cmn-toggle-switch__htx.active {
+.c-hamburger--htx.is-active {
   background-color: #cb0032;
 }
 
-.cmn-toggle-switch__htx.active span {
+.c-hamburger--htx.is-active span {
   background: none;
 }
 
-.cmn-toggle-switch__htx.active span::before {
+.c-hamburger--htx.is-active span::before {
   top: 0;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
-.cmn-toggle-switch__htx.active span::after {
+.c-hamburger--htx.is-active span::after {
   bottom: 0;
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
-.cmn-toggle-switch__htx.active span::before,
-.cmn-toggle-switch__htx.active span::after {
-  -webkit-transition-delay: 0, 0.3s;
-          transition-delay: 0, 0.3s;
+.c-hamburger--htx.is-active span::before,
+.c-hamburger--htx.is-active span::after {
+  transition-delay: 0s, 0.3s;
 }
 ```
 
@@ -210,66 +182,46 @@ This version of the hamburger icon animates it to an “x” by moving the top a
 In this version of the icon, the whole thing rotates 180 degrees, and the top and bottom bars animate to form a left-pointing arrow. Here’s the CSS:
 
 ```css
-/**
- * Style 3
- *
- * Hamburger to left-arrow (htla). Hamburger menu transforms to a left-pointing
- * arrow. Usually indicates an off canvas menu sliding in from left that
- * will be close on re-click of the icon.
- */
-.cmn-toggle-switch__htla {
+.c-hamburger--htla {
   background-color: #32dc64;
 }
 
-.cmn-toggle-switch__htla span {
-  -webkit-transition: -webkit-transform 0.3s;
-          transition: transform 0.3s;
+.c-hamburger--htla span {
+  transition: transform 0.3s;
 }
 
-.cmn-toggle-switch__htla span::before {
-  -webkit-transform-origin: top right;
-      -ms-transform-origin: top right;
-          transform-origin: top right;
-  -webkit-transition: -webkit-transform 0.3s, width 0.3s, top 0.3s;
-          transition: transform 0.3s, width 0.3s, top 0.3s;
+.c-hamburger--htla span::before {
+  transform-origin: top right;
+  transition: transform 0.3s, width 0.3s, top 0.3s;
 }
 
-.cmn-toggle-switch__htla span::after {
-  -webkit-transform-origin: bottom right;
-      -ms-transform-origin: bottom right;
-          transform-origin: bottom right;
-  -webkit-transition: -webkit-transform 0.3s, width 0.3s, bottom 0.3s;
-          transition: transform 0.3s, width 0.3s, bottom 0.3s;
+.c-hamburger--htla span::after {
+  transform-origin: bottom right;
+  transition: transform 0.3s, width 0.3s, bottom 0.3s;
 }
 
 /* active state, i.e. menu open */
-.cmn-toggle-switch__htla.active {
+.c-hamburger--htla.is-active {
   background-color: #18903c;
 }
 
-.cmn-toggle-switch__htla.active span {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
+.c-hamburger--htla.is-active span {
+  transform: rotate(180deg);
 }
 
-.cmn-toggle-switch__htla.active span::before,
-.cmn-toggle-switch__htla.active span::after {
+.c-hamburger--htla.is-active span::before,
+.c-hamburger--htla.is-active span::after {
   width: 50%;
 }
 
-.cmn-toggle-switch__htla.active span::before {
+.c-hamburger--htla.is-active span::before {
   top: 0;
-  -webkit-transform: translateX(42px) translateY(3px) rotate(45deg);
-      -ms-transform: translateX(42px) translateY(3px) rotate(45deg);
-          transform: translateX(42px) translateY(3px) rotate(45deg);
+  transform: translateX(38px) translateY(4px) rotate(45deg);
 }
 
-.cmn-toggle-switch__htla.active span::after {
+.c-hamburger--htla.is-active span::after {
   bottom: 0;
-  -webkit-transform: translateX(42px) translateY(-3px) rotate(-45deg);
-      -ms-transform: translateX(42px) translateY(-3px) rotate(-45deg);
-          transform: translateX(42px) translateY(-3px) rotate(-45deg);
+  transform: translateX(38px) translateY(-4px) rotate(-45deg);
 }
 ```
 
@@ -280,66 +232,46 @@ In this version of the icon, the whole thing rotates 180 degrees, and the top an
 This is very similar to the above version, except the arrow ends up pointing the other way (i.e. to the right). Here’s the CSS:
 
 ```css
-/**
- * Style 4
- *
- * Hamburger to right-arrow (htra). Hamburger menu transforms to a
- * right-pointing arrow. Usually indicates an off canvas menu sliding in from 
- * right that will be close on re-click of the icon.
- */
-.cmn-toggle-switch__htra {
+.c-hamburger--htra {
   background-color: #ff9650;
 }
 
-.cmn-toggle-switch__htra span {
-  -webkit-transition: -webkit-transform 0.3s;
-          transition: transform 0.3s;
+.c-hamburger--htra span {
+  transition: transform 0.3s;
 }
 
-.cmn-toggle-switch__htra span::before {
-  -webkit-transform-origin: top left;
-      -ms-transform-origin: top left;
-          transform-origin: top left;
-  -webkit-transition: -webkit-transform 0.3s, width 0.3s, top 0.3s;
-          transition: transform 0.3s, width 0.3s, top 0.3s;
+.c-hamburger--htra span::before {
+  transform-origin: top left;
+  transition: transform 0.3s, width 0.3s, top 0.3s;
 }
 
-.cmn-toggle-switch__htra span::after {
-  -webkit-transform-origin: bottom left;
-      -ms-transform-origin: bottom left;
-          transform-origin: bottom left;
-  -webkit-transition: -webkit-transform 0.3s, width 0.3s, bottom 0.3s;
-          transition: transform 0.3s, width 0.3s, bottom 0.3s;
+.c-hamburger--htra span::after {
+  transform-origin: bottom left;
+  transition: transform 0.3s, width 0.3s, bottom 0.3s;
 }
 
 /* active state, i.e. menu open */
-.cmn-toggle-switch__htra.active {
+.c-hamburger--htra.is-active {
   background-color: #e95d00;
 }
 
-.cmn-toggle-switch__htra.active span {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
+.c-hamburger--htra.is-active span {
+  transform: rotate(180deg);
 }
 
-.cmn-toggle-switch__htra.active span::before,
-.cmn-toggle-switch__htra.active span::after {
+.c-hamburger--htra.is-active span::before,
+.c-hamburger--htra.is-active span::after {
   width: 50%;
 }
 
-.cmn-toggle-switch__htra.active span::before {
+.c-hamburger--htra.is-active span::before {
   top: 0;
-  -webkit-transform: translateX(-6px) translateY(3px) rotate(-45deg);
-      -ms-transform: translateX(-6px) translateY(3px) rotate(-45deg);
-          transform: translateX(-6px) translateY(3px) rotate(-45deg);
+  transform: translateX(-8px) translateY(4px) rotate(-45deg);
 }
 
-.cmn-toggle-switch__htra.active span::after {
+.c-hamburger--htra.is-active span::after {
   bottom: 0;
-  -webkit-transform: translateX(-6px) translateY(-3px) rotate(45deg);
-      -ms-transform: translateX(-6px) translateY(-3px) rotate(45deg);
-          transform: translateX(-6px) translateY(-3px) rotate(45deg);
+  transform: translateX(-8px) translateY(-4px) rotate(45deg);
 }
 ```
 
@@ -352,7 +284,7 @@ All of this is a bit useless if there’s no way to see the actual active versio
 
   "use strict";
 
-  var toggles = document.querySelectorAll(".cmn-toggle-switch");
+  var toggles = document.querySelectorAll(".c-hamburger");
 
   for (var i = toggles.length - 1; i >= 0; i--) {
     var toggle = toggles[i];
@@ -362,7 +294,7 @@ All of this is a bit useless if there’s no way to see the actual active versio
   function toggleHandler(toggle) {
     toggle.addEventListener( "click", function(e) {
       e.preventDefault();
-      (this.classList.contains("active") === true) ? this.classList.remove("active") : this.classList.add("active");
+      (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
     });
   }
 
@@ -373,7 +305,16 @@ Of course, I’m iterating over all the icons. In your app however, you’ll lik
 
 ## Sass To The Rescue
 
-As I mentioned above, if you’re using Sass, it’ll make your life a whole lot easier. In the source code, all the Sass variables (only 4 of them) are set up making it very easy to edit the size of the button, thickness of the hamburger bars, and padding between the parent button and the inner span. It really saves a whole lot of time!
+As I mentioned above, if you’re using Sass, it’ll make your life a whole lot easier. In the source code, all the Sass variables are set up making it very easy to edit the size of the button, thickness of the hamburger bars, and padding between the parent button and the inner span. It really saves a whole lot of time! Here's the Sass block that you can configure:
+
+```scss
+$button-width: 96px;                    // The width of the button area
+$button-height: 96px;                   // The height of the button area
+$bar-thickness: 8px;                    // The thickness of the button bars
+$button-pad: 18px;                      // The left/right padding between button area and bars.
+$button-bar-space: 12px;                // The spacing between button bars
+$button-transistion-duration: 0.3s;     // The transition duration
+```
 
 ## Wrap Up
 

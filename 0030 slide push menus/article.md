@@ -1,5 +1,5 @@
 <p class="text-align--center">
-<a href="http://callmenick.com/_development/slide-push-menus/slide-push-menus-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="https://github.com/callmenick/Slide-Push-Menus" class="button button--inline-block button--medium">Get Source</a>
 <a href="http://callmenick.com/_development/slide-push-menus/" class="button button--inline-block button--medium">View Demo</a>
 </p>
 
@@ -27,629 +27,587 @@ Finally, let’s take a look at the 8 varieties of menu we will create:
 * __Push top menu,__ which slides in from the top and pushes the content down
 * __Push bottom menu,__ which slides in from the bottom and pushes the content up
 
-When a menu is open, we’ll show a “mask” over the main wrapper. This is basically a semi-transparent overlay that hides the main content. When the user clicks the overlay, the menu will toggle back out of view. In each menu, there will also be a “close menu” button, which will help out when the menu takes up the full width of the screen on smaller screen sizes. Let’s first take a look at the general markup and CSS for all.
+When a menu is open, we’ll show a “mask” over the main wrapper. This is basically a semi-transparent overlay that hides the main content. When the user clicks the overlay, the menu will toggle back out of view. In each menu, there will also be a “close menu” button, which will help out when the menu takes up the full width of the screen on smaller screen sizes. Let’s first take a look at the general markup for the document, the markup for each of the menus, and CSS for all the menus.
 
-## The HTML
+## Document Markup
+
+It's important to remember that because we sometimes want all the content to get nudged in a direction when a menu is "pushing" onto the screen, the content needs to be wrapped. Likewise, the menus need to reside outside this wrapper. Here's the general markup:
 
 ```html
-<body>
+<div id="o-wrapper" class="o-wrapper">
+  
+  <div class="c-buttons">
+    <button id="c-button--slide-left" class="c-button">Slide Left</button>
+    <button id="c-button--slide-right" class="c-button">Slide Right</button>
+    <button id="c-button--push-left" class="c-button">Push Left</button>
+    <button id="c-button--push-right" class="c-button">Push Right</button>
+    <button id="c-button--slide-top" class="c-button">Slide Top</button>
+    <button id="c-button--slide-bottom" class="c-button">Slide Botton</button>
+    <button id="c-button--push-top" class="c-button">Push Top</button>
+    <button id="c-button--push-bottom" class="c-button">Push Bottom</button>
+  </div>
 
-    <nav class="menu slide-menu-left">
-        <ul>
-            <li><button class="close-menu">&larr; Close</button></li>
-            <li><a href="#">Broccoli</a></li>
-            ...
-        </ul>
-    </nav><!-- /slide menu left -->
+  <!-- other content in here -->
+  
+</div><!-- /o-wrapper -->
 
-    <nav class="menu slide-menu-right">
-        <ul>
-            <li><button class="close-menu">Close &rarr;</button></li>
-            <li><a href="#">Broccoli</a></li>
-            ...
-        </ul>
-    </nav><!-- /slide menu right -->
+<!-- menus here -->
 
-    <nav class="menu slide-menu-top">
-        <ul>
-            <li><button class="close-menu">&uarr; Close</button></li>
-            <li><a href="#">Broccoli</a></li>
-            ...
-        </ul>
-    </nav><!-- /slide menu top -->
-
-    <nav class="menu slide-menu-bottom">
-        <ul>
-            <li><button class="close-menu">Close &darr;</button></li>
-            <li><a href="#">Broccoli</a></li>
-            ...
-        </ul>
-    </nav><!-- /slide menu bottom -->
-
-    <nav class="menu push-menu-left">
-        <ul>
-            <li><button class="close-menu">&larr; Close</button></li>
-            <li><a href="#">Broccoli</a></li>
-            ...
-        </ul>
-    </nav><!-- /push menu left -->
-
-    <nav class="menu push-menu-right">
-        <ul>
-            <li><button class="close-menu">Close &rarr;</button></li>
-            <li><a href="#">Broccoli</a></li>
-            ...
-        </ul>
-    </nav><!-- /push menu right -->
-
-    <nav class="menu push-menu-top">
-        <ul>
-            <li><button class="close-menu">&uarr; Close</button></li>
-            <li><a href="#">Broccoli</a></li>
-            ...
-        </ul>
-    </nav><!-- /push menu top -->
-
-    <nav class="menu push-menu-bottom">
-        <ul>
-            <li><button class="close-menu">Close &darr;</button></li>
-            <li><a href="#">Broccoli</a></li>
-            ...
-        </ul>
-    </nav><!-- /push menu bottom -->
-
-    <div id="wrapper">
-        <div id="main">
-            <div class="container">
-                <div class="buttons">
-                    <button class="nav-toggler toggle-slide-left">Slide Menu Left</button>
-                    ...
-                </div><!-- /buttons -->
-                <section class="content">
-                    <h1>Vegetables</h1>
-                    <p>Turnip greens yarrow...</p>
-                </section><!-- /.content -->
-            </div>
-        </div><!-- #main -->
-
-    </div><!-- /#wrapper -->
-
-</body>
+<div id="c-mask" class="c-mask"></div><!-- /c-mask -->
 ```
+
+I've also included some buttons which will be useful later when we want to active menus via JavaScript. Let's look at the structure of the menus.
+
+## The Markup For The Menus
+
+Each menu will be governed by a master class of `c-menu`, with a respective modifier for styling customisations. All the menus will also have a corresponding ID for quick querying in the JavaScript. Here's the markup for each menu:
+
+```html
+<nav id="c-menu--slide-left" class="c-menu c-menu--slide-left">
+  <button class="c-menu__close">&larr; Close Menu</button>
+  <ul class="c-menu__items">
+    <li class="c-menu__item"><a href="#" class="c-menu__link">Home</a></li>
+    <li class="c-menu__item"><a href="#" class="c-menu__link">About</a></li>
+    <li class="c-menu__item"><a href="#" class="c-menu__link">Services</a></li>
+    <li class="c-menu__item"><a href="#" class="c-menu__link">Work</a></li>
+    <li class="c-menu__item"><a href="#" class="c-menu__link">Contact</a></li>
+  </ul>
+</nav><!-- /c-menu slide-left -->
+
+<nav id="c-menu--slide-right" class="c-menu c-menu--slide-right">
+  <!-- ... -->
+</nav><!-- /c-menu slide-right -->
+
+<nav id="c-menu--push-left" class="c-menu c-menu--push-left">
+  <!-- ... -->
+</nav><!-- /c-menu push-left -->
+
+<nav id="c-menu--push-right" class="c-menu c-menu--push-right">
+  <!-- ... -->
+</nav><!-- /c-menu push-right -->
+
+<nav id="c-menu--slide-top" class="c-menu c-menu--slide-top">
+  <!-- ... -->
+</nav><!-- /c-menu slide-top -->
+
+<nav id="c-menu--push-top" class="c-menu c-menu--push-top">
+  <!-- ... -->
+</nav><!-- /c-menu push-top -->
+
+<nav id="c-menu--slide-bottom" class="c-menu c-menu--slide-bottom">
+  <!-- ... -->
+</nav><!-- /c-menu slide-bottom -->
+
+<nav id="c-menu--push-bottom" class="c-menu c-menu--push-bottom">
+  <!-- ... -->
+</nav><!-- /c-menu push-bottom -->
+```
+
+I didn't write out the markup for every single menu, but the pattern is obvious here. Let's move onto the CSS!
 
 ## The Common CSS
 
+First, let's take a look at the common CSS for all the menus and the document body:
+
 ```css
-/* ------------------------------------------------------------ *\
-|* ------------------------------------------------------------ *|
-|* Template
-|* ------------------------------------------------------------ *|
-\* ------------------------------------------------------------ */
-body {
-    overflow-x: hidden
+/**
+ * Menu overview.
+ */
+.c-menu {
+  position: fixed;
+  z-index: 200;
+  background-color: #67b5d1;
+  transition: transform 0.3s;
 }
-#wrapper {
-    position: relative;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+
+.c-menu__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-section {
-    margin-bottom: 30px
+
+/**
+ * Close button resets.
+ */
+.c-menu__close {
+  color: #fff;
+  background-color: #3184a1;
+  font-size: 14px;
+  border: none;
+  box-shadow: none;
+  border-radius: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
 }
-section h1 {
-    font-family: "Oswald", sans-serif;
-    margin-bottom: 10px;
+
+/**
+ * Close button resets.
+ */
+.c-menu__close:focus {
+  outline: none;
 }
-section p {
-    margin-bottom: 30px
+
+/**
+ * Body states.
+ *
+ * When a menu is active, we want to hide the overflows on the body to prevent
+ * awkward document scrolling.
+ */
+body.has-active-menu {
+  overflow: hidden;
 }
-section p:last-child {
-    margin-bottom: 0
+
+/**
+ * Mask component
+ */
+ 
+.c-mask {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  background-color: #000;
+  opacity: 0;
+  transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s;
 }
-section:last-child {
-    margin-bottom: 0
-}
-section.toggle {
-    text-align: center
-}
-.mask {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 15;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-}
-/* ------------------------------------------------------------ *\
-|* ------------------------------------------------------------ *|
-|* Menus
-|* ------------------------------------------------------------ *|
-\* ------------------------------------------------------------ */
-/* general style for all menus */
-nav.menu {
-    position: fixed;
-    z-index: 20;
-    background-color: #67b5d1;
-    overflow: hidden;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
-nav.menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-nav.menu a {
-    font-weight: 300;
-    color: #fff;
-}
-button.close-menu {
-    background-color: #3184a1;
-    color: #fff;
-}
-button.close-menu:focus {
-    outline: none
+
+.c-mask.is-active {
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  transition: opacity 0.3s;
 }
 ```
 
-## Understanding The Structure
+Each menu needs to be fixed in place and above all other content. Inside each menu, there will also be a close button, allowing users to close the menu. Also, we need to account for an active state, and hide content overflow on the body when a menu is active. This will prevent some awkward document scrolling when a menu is activated. Finally, we need to include some styles for the mask, allowing it to fade in and out when menus are activated and deactivated. Let's now move onto the various versions of the menus.
 
-Our body `overflow-x` is set to hidden, because we don’t want to have scrollbars on display when the wrapper is pushed to the left or right. When it’s pushed vertically, it doesn’t matter. More importantly though is positioning our off-screen navigation menus OUTSIDE the wrapper, because oddly enough, when a transform is applied to an element, it takes on a relative positioning temporarily. Since our navigation menus need to be fixed to the outer parts of the browser window, we don’t want it inside an element with relative positioning. Inside each menu, there’s a list of menu items, and a close menu button.
+## 1 - Left & Right Menus
 
-There’s ongoing discussion about the performance differences of absolute positioning/left/top versus transforms/translating. [Paul Irish digs deep into this and you can read about it here](http://www.paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/). I’m using positioning in this case because we will have a non-transitioning fallback solution for older browsers, without having to use conditional stylesheets. Also, after testing both, the difference was totally unseeable to the human eye. Let’s take a look at version of our menu now.
-
-## 1) Slide Menu Left
-
-This menu slides in from the left over the content. Here’s the CSS for it:
+Menus coming in from the left and right of the screen will inherit a lot of the same styles, so let's group them together. First, we'll take a look at some of the common CSS:
 
 ```css
-nav.slide-menu-left {
-    top: 0;
+.c-menu--slide-left,
+.c-menu--slide-right,
+.c-menu--push-left,
+.c-menu--push-right {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+@media all and (min-width: 320px) {
+  .c-menu--slide-left,
+  .c-menu--slide-right,
+  .c-menu--push-left,
+  .c-menu--push-right {
     width: 300px;
-    height: 100%;
+  }
 }
-nav.slide-menu-left li {
-    display: block;
-    text-align: center;
-    border-bottom: solid 1px #3184a1;
-    border-top: solid 1px #b5dbe9;
+
+.c-menu--slide-left .c-menu__item,
+.c-menu--slide-right .c-menu__item,
+.c-menu--push-left .c-menu__item,
+.c-menu--push-right .c-menu__item {
+  display: block;
+  text-align: center;
+  border-top: solid 1px #b5dbe9;
+  border-bottom: solid 1px #3184a1;
 }
-nav.slide-menu-left li:first-child {
-    border-top: none
+
+.c-menu--slide-left .c-menu__item:first-child,
+.c-menu--slide-right .c-menu__item:first-child,
+.c-menu--push-left .c-menu__item:first-child,
+.c-menu--push-right .c-menu__item:first-child {
+  border-top: none;
 }
-nav.slide-menu-left li:last-child {
-    border-bottom: none
+
+.c-menu--slide-left .c-menu__item:last-child,
+.c-menu--slide-right .c-menu__item:last-child,
+.c-menu--push-left .c-menu__item:last-child,
+.c-menu--push-right .c-menu__item:last-child {
+  border-bottom: none;
 }
-nav.slide-menu-left a {
-    display: block;
-    padding: 10px;
-    font-size: 18px;
+
+.c-menu--slide-left .c-menu__link,
+.c-menu--slide-right .c-menu__link,
+.c-menu--push-left .c-menu__link,
+.c-menu--push-right .c-menu__link {
+  display: block;
+  padding: 12px 24px;
+  color: #fff;
 }
-nav.slide-menu-left button.close-menu {
-    margin: 10px 0;
-    padding: 10px 30px;
-    background-color: #3184a1;
-    color: #fff;
-}
-nav.slide-menu-left {
-    left: -300px
-}
-body.sml-open nav.slide-menu-left {
-    left: 0
+
+.c-menu--slide-left .c-menu__close,
+.c-menu--slide-right .c-menu__close,
+.c-menu--push-left .c-menu__close,
+.c-menu--push-right .c-menu__close {
+  display: block;
+  padding: 12px 24px;
+  width: 100%;
 }
 ```
 
-## 2) Slide Menu Right
+Take note of the width and height of the menus and how that changes depending on screen width. Also of importance is the overflow property on the menu itself, allowing users to scroll up and down the menu if there is a lot of content. Let's move on now to the sub-versions of the left and right menus.
 
-This menu slides in from the right above the content. Here’s the CSS for it:
+### 1a - Slide & Push Left Menus
+
+Slide and push left menus inherit the exact same styles, because the movement of them is the same. Here's the CSS:
 
 ```css
-nav.slide-menu-right {
-    top: 0;
-    width: 300px;
-    height: 100%;
+.c-menu--slide-left,
+.c-menu--push-left {
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
 }
-nav.slide-menu-right li {
-    display: block;
-    text-align: center;
-    border-bottom: solid 1px #3184a1;
-    border-top: solid 1px #b5dbe9;
+
+@media all and (min-width: 320px) {
+  .c-menu--slide-left,
+  .c-menu--push-left {
+    transform: translateX(-300px);
+  }
 }
-nav.slide-menu-right li:first-child {
-    border-top: none
-}
-nav.slide-menu-right li:last-child {
-    border-bottom: none
-}
-nav.slide-menu-right a {
-    display: block;
-    padding: 10px;
-    font-size: 18px;
-}
-nav.slide-menu-right button.close-menu {
-    margin: 10px 0;
-    padding: 10px 30px;
-    background-color: #3184a1;
-    color: #fff;
-}
-nav.slide-menu-right {
-    right: -300px
-}
-body.smr-open nav.slide-menu-right {
-    right: 0
+
+.c-menu--slide-left.is-active,
+.c-menu--push-left.is-active {
+  transform: translateX(0);
 }
 ```
 
-## 3) Slide Menu Top
+The menus start off screen initially, and when they are activated, they translate back to the start position. The animation occurs due to the transition property set earlier in the common CSS.
 
-This menu slides in from the top above the content. Here’s the CSS:
+### 1b - Slide & Push Right Menus
+
+These menus are the exact same as before, but in the opposite direction. Here's the CSS:
 
 ```css
-nav.slide-menu-top {
-    left: 0;
-    width: 100%;
-    height: 100px;
+.c-menu--slide-right,
+.c-menu--push-right {
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
 }
-nav.slide-menu-top ul {
-    text-align: center;
-    padding: 25px 0 0 0;
+
+@media all and (min-width: 320px) {
+  .c-menu--slide-right,
+  .c-menu--push-right {
+    transform: translateX(300px);
+  }
 }
-nav.slide-menu-top li {
-    display: inline-block;
-    margin: 0;
-    vertical-align: middle;
-}
-nav.slide-menu-top a {
-    display: block;
-    line-height: 50px;
-    padding: 0 10px;
-    font-size: 18px;
-}
-nav.slide-menu-top button.close-menu {
-    display: block;
-    line-height: 50px;
-    margin: 0;
-    padding: 0 10px;
-}
-nav.slide-menu-top {
-    top: -100px
-}
-body.smt-open nav.slide-menu-top {
-    top: 0
+
+.c-menu--slide-right.is-active,
+.c-menu--push-right.is-active {
+  transform: translateX(0);
 }
 ```
 
-## 4) Slide Menu Bottom
+This time, the menus start off the right of the screen, and transition into view like before. 
 
-This menu slides in from the bottom above the content. Here’s the CSS:
+### Left & Right Push Menus - Wrapper States
+
+We need to also account for the wrapper being pushed either to the left or right if a push menu is activated. Here's the CSS for that:
 
 ```css
-nav.slide-menu-bottom {
-    left: 0;
-    width: 100%;
-    height: 100px;
+.o-wrapper.has-push-left {
+  transform: translateX(100%);
 }
-nav.slide-menu-bottom ul {
-    text-align: center;
-    padding: 25px 0 0 0;
+
+@media all and (min-width: 320px) {
+  .o-wrapper.has-push-left {
+    transform: translateX(300px);
+  }
 }
-nav.slide-menu-bottom li{
-    display: inline-block;
-    margin: 0;
-    vertical-align: middle;
+
+.o-wrapper.has-push-right {
+  transform: translateX(-100%);
 }
-nav.slide-menu-bottom a{
-    display: block;
-    line-height: 50px;
-    padding: 0 10px;
-    font-size: 18px;
-}
-nav.slide-menu-bottom button.close-menu{
-    display: block;
-    line-height: 50px;
-    margin: 0;
-    padding: 0 10px;
-}
-nav.slide-menu-bottom {
-    bottom: -100px
-}
-body.smb-open nav.slide-menu-bottom {
-    bottom: 0
+
+@media all and (min-width: 320px) {
+  .o-wrapper.has-push-right {
+    transform: translateX(-300px);
+  }
 }
 ```
 
-## 5) Push Menu Left
+Let's move on to the top and bottom menus!
 
-This menu slides in from the left, and pushes the content to the right. A lot of the CSS is similar to the slide menu left, except we have to move the wrapper as well. Here’s the CSS:
+## 1 - Top & Bottom Menus
+
+Once again, menus coming in from the left and right of the screen will inherit a lot of the same styles, so let's group them together. Here's some common CSS for them:
 
 ```css
-nav.push-menu-left {
-    top: 0;
-    width: 300px;
-    height: 100%;
+.c-menu--slide-top,
+.c-menu--slide-bottom,
+.c-menu--push-top,
+.c-menu--push-bottom {
+  vertical-align: middle;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  overflow-x: scroll;
 }
-nav.push-menu-left li {
-    display: block;
-    text-align: center;
-    border-bottom: solid 1px #3184a1;
-    border-top: solid 1px #b5dbe9;
+
+.c-menu--slide-top .c-menu__items,
+.c-menu--slide-bottom .c-menu__items,
+.c-menu--push-top .c-menu__items,
+.c-menu--push-bottom .c-menu__items {
+  display: inline-block;
+  text-align: center;
 }
-nav.push-menu-left li:first-child {
-    border-top: none
+
+.c-menu--slide-top .c-menu__item,
+.c-menu--slide-bottom .c-menu__item,
+.c-menu--push-top .c-menu__item,
+.c-menu--push-bottom .c-menu__item {
+  display: inline-block;
+  line-height: 60px;
 }
-nav.push-menu-left li:last-child {
-    border-bottom: none
+
+.c-menu--slide-top .c-menu__link,
+.c-menu--slide-bottom .c-menu__link,
+.c-menu--push-top .c-menu__link,
+.c-menu--push-bottom .c-menu__link {
+  display: block;
+  padding: 0 4px;
+  color: #fff;
 }
-nav.push-menu-left a {
-    display: block;
-    padding: 10px;
-    font-size: 18px;
-}
-nav.push-menu-left button.close-menu {
-    margin: 10px 0;
-    padding: 10px 30px;
-    background-color: #3184a1;
-    color: #fff;
-}
-nav.push-menu-left {
-    left: -300px
-}
-body.pml-open nav.push-menu-left {
-    left: 0
-}
-body.pml-open #wrapper {
-    left: 300px
+
+.c-menu--slide-top .c-menu__close,
+.c-menu--slide-bottom .c-menu__close,
+.c-menu--push-top .c-menu__close,
+.c-menu--push-bottom .c-menu__close {
+  display: inline-block;
+  margin-right: 12px;
+  padding: 0 24px;
+  height: 60px;
+  line-height: 60px;
 }
 ```
 
-## 6) Push Menu Right
+The height of this menu is important this time, as it will account for how much the wrapper gets pushed up or down. Let's look at the individual sub-versions.
 
-This menu slides in from the right, and pushes the content to the left. A lot of the CSS is similar to the slide menu right, except we have to move the wrapper as well. Here’s the CSS:
+### 1a - Slide & Push Top Menus
+
+Slide and push top menus inherit the exact same styles. Here's the CSS:
 
 ```css
-nav.push-menu-right {
-    top: 0;
-    width: 300px;
-    height: 100%;
+.c-menu--slide-top,
+.c-menu--push-top {
+  top: 0;
+  left: 0;
+  transform: translateY(-60px);
 }
-nav.push-menu-right li {
-    display: block;
-    text-align: center;
-    border-bottom: solid 1px #3184a1;
-    border-top: solid 1px #b5dbe9;
-}
-nav.push-menu-right li:first-child {
-    border-top: none
-}
-nav.push-menu-right li:last-child {
-    border-bottom: none
-}
-nav.push-menu-right a {
-    display: block;
-    padding: 10px;
-    font-size: 18px;
-}
-nav.push-menu-right button.close-menu {
-    margin: 10px 0;
-    padding: 10px 30px;
-    background-color: #3184a1;
-    color: #fff;
-}
-nav.push-menu-right {
-    right: -300px
-}
-body.pmr-open nav.push-menu-right {
-    right: 0
-}
-body.pmr-open #wrapper {
-    left: -300px
+
+.c-menu--slide-top.is-active,
+.c-menu--push-top.is-active {
+  transform: translateY(0);
 }
 ```
 
-## 7) Push Menu Top
+These menus start off the top of the screen initially, and transition back into their default position when active. The translation is based on the height of the menu this time.
 
-This menu slides in from the top, and pushes the content downward. A lot of the CSS is similar to the slide menu top, except we have to move the wrapper as well. Here’s the CSS:
+### 1b - Slide & Push Bottom Menus
+
+Now let's look at the menus coming in from the bottom. Here's the CSS for those:
 
 ```css
-nav.push-menu-top {
-    left: 0;
-    width: 100%;
-    height: 100px;
+.c-menu--slide-bottom,
+.c-menu--push-bottom {
+  bottom: 0;
+  left: 0;
+  transform: translateY(60px);
 }
-nav.push-menu-top ul {
-    text-align: center;
-    padding: 25px 0 0 0;
-}
-nav.push-menu-top li {
-    display: inline-block;
-    margin: 0;
-    vertical-align: middle;
-}
-nav.push-menu-top a {
-    display: block;
-    line-height: 50px;
-    padding: 0 10px;
-    font-size: 18px;
-}
-nav.push-menu-top button.close-menu {
-    display: block;
-    line-height: 50px;
-    margin: 0;
-    padding: 0 10px;
-}
-nav.push-menu-top {
-    top: -100px
-}
-body.pmt-open nav.push-menu-top {
-    top: 0
-}
-body.pmt-open #wrapper {
-    top: 100px
+
+.c-menu--slide-bottom.is-active,
+.c-menu--push-bottom.is-active {
+  transform: translateY(0);
 }
 ```
 
-## 8) Push Menu Bottom
+These are very similar to the ones above, but this time, they start off the bottom of the screen. 
 
-This menu slides in from the bottom, and pushes the content upward. A lot of the CSS is similar to the slide menu bottom, except we have to move the wrapper as well. Here’s the CSS:
+### Top & Bottom Push Menus - Wrapper States
+
+Once again, we need to account for wrapper movement when the top and bottom menus get pushed onto the screen. Here's the CSS:
 
 ```css
-nav.push-menu-bottom {
-    left: 0;
-    width: 100%;
-    height: 100px;
+.o-wrapper.has-push-top {
+  transform: translateY(60px);
 }
-nav.push-menu-bottom ul {
-    text-align: center;
-    padding: 25px 0 0 0;
-}
-nav.push-menu-bottom li {
-    display: inline-block;
-    margin: 0;
-    vertical-align: middle;
-}
-nav.push-menu-bottom a {
-    display: block;
-    line-height: 50px;
-    padding: 0 10px;
-    font-size: 18px;
-}
-nav.push-menu-bottom button.close-menu {
-    display: block;
-    line-height: 50px;
-    margin: 0;
-    padding: 0 10px;
-}
-nav.push-menu-bottom {
-    bottom: -100px
-}
-body.pmb-open nav.push-menu-bottom {
-    bottom: 0
-}
-body.pmb-open #wrapper {
-    top: -100px
+
+.o-wrapper.has-push-bottom {
+  transform: translateY(-60px);
 }
 ```
+
+Nice! Now, you might be wondering how it all works. With a bit of JavaScript of course! Let's create our JavaScript component, and then write a little script to activate the menus.
 
 ## The JavaScript
 
-Now, let’s take a look at the JavaScript to toggle our classes when we hit the different menu buttons. We’ll also display our mask over the rest of the content, and implement some “close menu” functionality when the user clicks the mask or the close-menu button.  Remember, I’m using classie.js to add and remove classes. My JavaScript, of course, is covering all eight menus. You might want to tailor your JavaScript and cut out the unnecessary stuff (unless you’re actually using 8 menus on your site…). Here’s the JavaScript:
+In our JavaScript component, we want to achieve a few things:
+
+1. We want to, at any point, be able to create a new instance of a slide or push menu. For that, we will need a constructor function. 
+2. We want our menu to take options as well. The options will allow you to decide which type of menu they want to use upon instantiation, amongst other things.
+3. When a new instance of a menu is created, we want to be able to open and close that menu, and we also need to listen for events on the close button and the mask. These two events will close the menu.
+4. When a menu is open, we want to disable all buttons that can toggle new menus. For this, we rely on the `menuOpenerClass` option, which holds the class name set on all buttons that can be used to call the open function of a menu instance.
+5. Finally, we need to add our component to the global namespace so that we can access it anywhere.
+
+Here's the JavaScript, including two helper functions:
 
 ```javascript
-(function( window ){
+(function(window) {
 
-	var body = document.body,
-		mask = document.createElement("div"),
-		toggleSlideLeft = document.querySelector( ".toggle-slide-left" ),
-		toggleSlideRight = document.querySelector( ".toggle-slide-right" ),
-		toggleSlideTop = document.querySelector( ".toggle-slide-top" ),
-		toggleSlideBottom = document.querySelector( ".toggle-slide-bottom" ),
-		togglePushLeft = document.querySelector( ".toggle-push-left" ),
-		togglePushRight = document.querySelector( ".toggle-push-right" ),
-		togglePushTop = document.querySelector( ".toggle-push-top" ),
-		togglePushBottom = document.querySelector( ".toggle-push-bottom" ),
-		slideMenuLeft = document.querySelector( ".slide-menu-left" ),
-		slideMenuRight = document.querySelector( ".slide-menu-right" ),
-		slideMenuTop = document.querySelector( ".slide-menu-top" ),
-		slideMenuBottom = document.querySelector( ".slide-menu-bottom" ),
-		pushMenuLeft = document.querySelector( ".push-menu-left" ),
-		pushMenuRight = document.querySelector( ".push-menu-right" ),
-		pushMenuTop = document.querySelector( ".push-menu-top" ),
-		pushMenuBottom = document.querySelector( ".push-menu-bottom" ),
-		activeNav
-	;
-	
-	mask.className = "mask";
+  'use strict';
 
-	/* slide menu left */
-	toggleSlideLeft.addEventListener( "click", function(){
-		classie.add( body, "sml-open" );
-		document.body.appendChild(mask);
-		activeNav = "sml-open";
-	} );
+  /**
+   * Extend Object helper function.
+   */
+  function extend(a, b) {
+    for(var key in b) { 
+      if(b.hasOwnProperty(key)) {
+        a[key] = b[key];
+      }
+    }
+    return a;
+  }
 
-	/* slide menu right */
-	toggleSlideRight.addEventListener( "click", function(){
-		classie.add( body, "smr-open" );
-		document.body.appendChild(mask);
-		activeNav = "smr-open";
-	} );
+  /**
+   * Each helper function.
+   */
+  function each(collection, callback) {
+    for (var i = 0; i < collection.length; i++) {
+      var item = collection[i];
+      callback(item);
+    }
+  }
 
-	/* slide menu top */
-	toggleSlideTop.addEventListener( "click", function(){
-		classie.add( body, "smt-open" );
-		document.body.appendChild(mask);
-		activeNav = "smt-open";
-	} );
+  /**
+   * Menu Constructor.
+   */
+  function Menu(options) {
+    this.options = extend({}, this.options);
+    extend(this.options, options);
+    this._init();
+  }
 
-	/* slide menu bottom */
-	toggleSlideBottom.addEventListener( "click", function(){
-		classie.add( body, "smb-open" );
-		document.body.appendChild(mask);
-		activeNav = "smb-open";
-	} );
+  /**
+   * Menu Options.
+   */
+  Menu.prototype.options = {
+    wrapper: '#o-wrapper',          // The content wrapper
+    type: 'slide-left',             // The menu type
+    menuOpenerClass: '.c-button',   // The menu opener class names (i.e. the buttons)
+    maskId: '#c-mask'               // The ID of the mask
+  };
 
-	/* push menu left */
-	togglePushLeft.addEventListener( "click", function(){
-		classie.add( body, "pml-open" );
-		document.body.appendChild(mask);
-		activeNav = "pml-open";
-	} );
+  /**
+   * Initialise Menu.
+   */
+  Menu.prototype._init = function() {
+    this.body = document.body;
+    this.wrapper = document.querySelector(this.options.wrapper);
+    this.mask = document.querySelector(this.options.maskId);
+    this.menu = document.querySelector('#c-menu--' + this.options.type);
+    this.closeBtn = this.menu.querySelector('.c-menu__close');
+    this.menuOpeners = document.querySelectorAll(this.options.menuOpenerClass);
+    this._initEvents();
+  };
 
-	/* push menu right */
-	togglePushRight.addEventListener( "click", function(){
-		classie.add( body, "pmr-open" );
-		document.body.appendChild(mask);
-		activeNav = "pmr-open";
-	} );
+  /**
+   * Initialise Menu Events.
+   */
+  Menu.prototype._initEvents = function() {
+    // Event for clicks on the close button inside the menu.
+    this.closeBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      this.close();
+    }.bind(this));
 
-	/* push menu top */
-	togglePushTop.addEventListener( "click", function(){
-		classie.add( body, "pmt-open" );
-		document.body.appendChild(mask);
-		activeNav = "pmt-open";
-	} );
+    // Event for clicks on the mask.
+    this.mask.addEventListener('click', function(e) {
+      e.preventDefault();
+      this.close();
+    }.bind(this));
+  };
 
-	/* push menu bottom */
-	togglePushBottom.addEventListener( "click", function(){
-		classie.add( body, "pmb-open" );
-		document.body.appendChild(mask);
-		activeNav = "pmb-open";
-	} );
+  /**
+   * Open Menu.
+   */
+  Menu.prototype.open = function() {
+    this.body.classList.add('has-active-menu');
+    this.wrapper.classList.add('has-' + this.options.type);
+    this.menu.classList.add('is-active');
+    this.mask.classList.add('is-active');
+    this.disableMenuOpeners();
+  };
 
-	/* hide active menu if mask is clicked */
-	mask.addEventListener( "click", function(){
-		classie.remove( body, activeNav );
-		activeNav = "";
-		document.body.removeChild(mask);
-	} );
+  /**
+   * Close Menu.
+   */
+  Menu.prototype.close = function() {
+    this.body.classList.remove('has-active-menu');
+    this.wrapper.classList.remove('has-' + this.options.type);
+    this.menu.classList.remove('is-active');
+    this.mask.classList.remove('is-active');
+    this.enableMenuOpeners();
+  };
 
-	/* hide active menu if close menu button is clicked */
-	[].slice.call(document.querySelectorAll(".close-menu")).forEach(function(el,i){
-		el.addEventListener( "click", function(){
-			classie.remove( body, activeNav );
-			activeNav = "";
-			document.body.removeChild(mask);
-		} );
-	});
+  /**
+   * Disable Menu Openers.
+   */
+  Menu.prototype.disableMenuOpeners = function() {
+    each(this.menuOpeners, function(item) {
+      item.disabled = true;
+    });
+  };
 
-})( window );
+  /**
+   * Enable Menu Openers.
+   */
+  Menu.prototype.enableMenuOpeners = function() {
+    each(this.menuOpeners, function(item) {
+      item.disabled = false;
+    });
+  };
+
+  /**
+   * Add to global namespace.
+   */
+  window.Menu = Menu;
+
+})(window);
 ```
+
+I saved this out to a file called `menu.js`, and included it in the index file. Underneath this inclusion, we can now start creating new menu instances, and listening for clicks on buttons to open up the menus. I'll just do one version here, but in the source, you can see how I created all 8 instances. Here's the slide left menu code:
+
+```javascript
+var slideLeft = new Menu({
+  wrapper: '#o-wrapper',
+  type: 'slide-left',
+  menuOpenerClass: '.c-button',
+  maskId: '#c-mask'
+});
+
+var slideLeftBtn = document.querySelector('#c-button--slide-left');
+
+slideLeftBtn.addEventListener('click', function(e) {
+  e.preventDefault;
+  slideLeft.open();
+});
+```
+
+And there you go. You should now be able to toggle menus and see them in action!
 
 ## Wrap Up
 
 There it is! Some nice slide and push menus, ready to drop into your project. I included sample media queries in the source code, so feel free to download it or view the demos by clicking the links below. Also, don’t forget to leave your comments below, and thanks for stopping by!
 
 <p class="text-align--center">
-<a href="http://callmenick.com/_development/slide-push-menus/slide-push-menus-source.zip" class="button button--inline-block button--medium">Get Source</a>
+<a href="https://github.com/callmenick/Slide-Push-Menus" class="button button--inline-block button--medium">Get Source</a>
 <a href="http://callmenick.com/_development/slide-push-menus/" class="button button--inline-block button--medium">View Demo</a>
 </p>
