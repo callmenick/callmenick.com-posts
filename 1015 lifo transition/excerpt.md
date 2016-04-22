@@ -1,1 +1,0 @@
-In this tutorial, we explore a CSS transition trick that I love that implements a last in, first out transition sequence.
